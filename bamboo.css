@@ -1,0 +1,508 @@
+/* =========================================================
+   竹構職人專屬樣式 (bamboo.css)
+   風格：職人、工藝、溫度、夜間氛圍
+   ========================================================= */
+
+/* --- 竹構照片展示區增強 --- */
+
+/* 讓圖片更有質感 */
+.bamboo-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* 預設比例 */
+    aspect-ratio: 4/3;
+}
+
+.bamboo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片填滿格子不變形 */
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 滑鼠懸停效果：輕微放大圖片，卡片上浮 */
+.bamboo-photo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.bamboo-photo:hover img {
+    transform: scale(1.08);
+}
+
+/* 圖片說明文字樣式 */
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.25rem 1rem;
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    /* 漸層背景讓文字在圖片上清楚顯示 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+    margin: 0;
+    transform: translateY(100%); /* 預設隱藏 */
+    transition: transform 0.3s ease-out;
+}
+
+/* 懸停時顯示文字 */
+.bamboo-photo:hover .photo-caption {
+    transform: translateY(0);
+}
+
+/* --- 夜間氛圍專屬調整 --- */
+.section--bamboo-night {
+    background: linear-gradient(135deg, #1a1f24 0%, #2d3436 100%);
+    color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 增加一點微光效果背景 */
+.section--bamboo-night::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.section--bamboo-night .section__title {
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.section--bamboo-night .section__description {
+    color: #a0a0a0;
+}
+
+.section--bamboo-night .card--story {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+}
+
+.section--bamboo-night .story-intro {
+    color: #ffb74d; /* 溫暖的燈光色 */
+    border-bottom-color: rgba(255, 183, 77, 0.3);
+}
+
+.highlight-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    position: relative;
+    padding: 1rem;
+}
+
+.highlight-text::before, .highlight-text::after {
+    content: '—';
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+/* =========================================================
+   雜誌風格強制排版 (Magazine Layout) - 絕對整齊版
+   ========================================================= */
+
+/* 通用圖片容器設定 */
+.bamboo-photo {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000; /* 圖片載入前的底色 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.bamboo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 關鍵：強制圖片填滿格子，多餘的自動裁掉 */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.bamboo-photo:hover img {
+    transform: scale(1.05); /* 滑鼠移過去稍微放大 */
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bamboo-photo:hover .photo-caption {
+    opacity: 1;
+}
+
+/* --- 新增樣式：竹構專欄引言 --- */
+.bamboo-quote-box {
+    border-left: 3px solid var(--color-accent);
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #5d4037;
+    border-radius: 0 8px 8px 0;
+}
+
+.bamboo-quote-box p {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.6;
+    font-family: "Noto Serif TC", serif;
+}
+
+#part1 .track-solid {
+    max-width: 60% !important;
+}
+
+#part1 .project-note {
+    width: 240px !important;
+    margin-left: 20px !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 7px 16px;
+    border-radius: 25px;
+    backdrop-filter: blur(3px);
+}
+
+/* 專欄版型：文字搭配兩張圖片 */
+.bamboo-featured-spotlight {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    align-items: start;
+}
+
+.bamboo-featured-spotlight--horizontal {
+    grid-template-columns: 1.2fr 1fr; /* 左邊文字，右邊圖片 */
+}
+
+.bamboo-featured-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bamboo-featured-text .subsection__title {
+    margin-bottom: 0.5rem;
+}
+
+.bamboo-featured-images {
+    display: grid;
+    grid-template-columns: 1fr; /* 單欄，上下排列 */
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.bamboo-featured-images--row {
+    grid-template-columns: 1fr !important; /* 強制單欄 */
+    grid-template-rows: auto auto !important; /* 上下排列 */
+}
+
+.bamboo-featured-images .bamboo-photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.bamboo-photo--vertical-standard {
+    aspect-ratio: 3 / 4;
+    max-height: 400px; /* 限制最大高度，不要太大 */
+}
+
+.bamboo-photo--horizontal {
+    aspect-ratio: 4 / 3; /* 橫版比例 */
+    max-height: 250px; /* 限制最大高度 */
+}
+
+.bamboo-photo--small {
+    max-height: 280px !important; /* 海報照片縮小 */
+    max-width: 350px !important; /* 橫版圖片寬一點 */
+}
+
+/* =========================================
+   修正後的雜誌排版：完工全景專用
+   ========================================= */
+.bamboo-grid-featured {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 左邊佔 2 等份，右邊佔 1 等份 */
+    grid-template-rows: 200px 200px; /* 固定高度 */
+    gap: 16px; /* 整齊的間距 */
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+/* 左邊的主圖：設定為 4:3 完美比例 */
+.bamboo-photo--main {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* 跨越兩列 */
+    height: 100%;
+}
+
+/* 右邊的兩張側邊圖：自動填滿 */
+.bamboo-photo--side {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .bamboo-grid-featured {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bamboo-photo--main {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .bamboo-photo--side {
+        aspect-ratio: 4 / 3;
+    }
+
+    .bamboo-featured-spotlight {
+        grid-template-columns: 1fr !important; /* 手機版變單欄 */
+    }
+
+    .bamboo-featured-images {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+    }
+
+    .bamboo-featured-images--row {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+    }
+
+    .bamboo-photo--vertical-standard {
+        max-height: 300px; /* 手機版圖片更小 */
+    }
+
+    .bamboo-photo--horizontal {
+        aspect-ratio: 4 / 3;
+        max-height: 200px;
+    }
+
+    .bamboo-photo--small {
+        max-height: 200px !important; /* 手機版海報更小 */
+        max-width: 250px !important; /* 橫版圖片寬一點 */
+    }
+}
+
+/* --- 版型 B：畫廊區 (整齊方塊) --- */
+/* 適合：施工過程、多張並列 */
+.bamboo-grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 強制 3 欄 */
+    gap: 16px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.bamboo-photo--square {
+    aspect-ratio: 1 / 1; /* 強制正方形 1:1 */
+    width: 100%;
+}
+
+/* --- 新增：直式 3:4 比例 (最適合一般直拍照片與海報) --- */
+.bamboo-photo--vertical-standard {
+    aspect-ratio: 3 / 4; /* 寬 3 : 高 4 */
+}
+
+/* 實作與傳承區塊背景圖片 */
+.section--academics:last-of-type {
+  position: relative;
+  background-image: url('img/bamboo/IMG_0885.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section--academics:last-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  z-index: 1;
+}
+
+.section--academics:last-of-type .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bamboo-grid-featured {
+    margin-top: 60px !important;
+}
+
+/* =========================================
+   深夜竹構．微型建造小遊戲樣式 
+   ========================================= */
+.game-wrapper {
+    margin: 4rem auto;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    background: radial-gradient(circle at center bottom, #2d3436 0%, #1a1f24 70%);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.2s;
+}
+
+.game-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.game-title {
+    margin-top: 0;
+    color: #ffb74d;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+/* SVG 畫布設定 */
+.game-svg {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    cursor: pointer; /* 讓使用者知道可以點擊 */
+    transition: transform 0.1s;
+}
+
+.game-svg:active {
+    transform: scale(0.98);
+}
+
+/* 竹子樣式定義 */
+.bamboo {
+    stroke: #8d6e63; /* 竹子深色 */
+    stroke-width: 8;
+    stroke-linecap: round;
+    fill: none;
+    opacity: 0; /* 初始隱藏 */
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bamboo.highlight {
+    stroke: #dcedc8; /* 竹子受光面 */
+    stroke-width: 4;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+/* 竹節 */
+.joint {
+    fill: #5d4037;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+/* 繩結 (白色棉繩) */
+.rope {
+    stroke: #f5f5f5;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20; /* 初始隱藏 */
+    opacity: 0;
+    transition: stroke-dashoffset 1s ease, opacity 0.5s ease;
+}
+
+/* 啟動狀態 class */
+.visible {
+    opacity: 1 !important;
+}
+
+.tied {
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+}
+
+/* 狀態文字區 */
+.status-panel {
+    margin-top: 20px;
+    min-height: 80px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-display {
+    font-family: 'Courier New', monospace;
+    color: #90a4ae;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.message-display {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.instruction {
+    font-size: 0.8rem;
+    color: #ffb74d;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* 燈光效果 */
+.light-beam {
+    fill: url(#lightGradient);
+    opacity: 0;
+    transition: opacity 2s ease;
+    mix-blend-mode: overlay;
+}

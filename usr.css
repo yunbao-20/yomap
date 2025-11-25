@@ -1,0 +1,321 @@
+/* =========================================================
+   USR 在地連結頁面專屬樣式 (usr.css)
+   ========================================================= */
+
+/* SDG 區塊背景圖片 */
+#part2 {
+  position: relative;
+  background-image: url('img/usr-2023.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#part2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.85) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+#part2 .container {
+  position: relative;
+  z-index: 2;
+}
+
+#part1 {
+  position: relative;
+  background-image: url('img/usr-1930.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#part1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.85) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+#part1 .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* SDG 圖表透明化 */
+#part2 .track-hollow,
+#part1 .track-solid {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Part1 進度條長度限制與右側說明文字空間 */
+#part1 .track-solid {
+  max-width: 60% !important;
+}
+
+#part1 .project-note {
+  width: 240px !important;
+  margin-left: 20px !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 7px 16px;
+  border-radius: 25px;
+  backdrop-filter: blur(3px);
+}
+
+/* 總結區塊背景圖片 */
+.section--sustainability:last-of-type {
+  position: relative;
+  background-image: url('img/usr-35.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section--sustainability:last-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  z-index: 1;
+}
+
+.section--sustainability:last-of-type .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 左右橫排版面容器 */
+.usr-horizontal-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* 單個案例卡片 */
+.usr-case-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  background: var(--bg-card, #fff);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 圖片容器 */
+.usr-case-image {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.usr-case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 文字內容區 */
+.usr-case-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.usr-case-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary, #008582);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.usr-case-content p {
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.usr-case-content strong {
+  color: var(--color-primary, #008582);
+  font-weight: 600;
+}
+
+/* 第一個案例：左圖右文（預設） */
+.usr-case-card--left-image .usr-case-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.usr-case-card--left-image .usr-case-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* 第二個案例：左文右圖 */
+.usr-case-card--right-image .usr-case-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.usr-case-card--right-image .usr-case-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* 響應式設計：平板 */
+@media (max-width: 900px) {
+  .usr-case-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .usr-case-image {
+    min-height: 250px;
+  }
+
+  /* 平板版面：統一改為上圖下文 */
+  .usr-case-card--left-image .usr-case-image,
+  .usr-case-card--right-image .usr-case-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .usr-case-card--left-image .usr-case-content,
+  .usr-case-card--right-image .usr-case-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+/* 響應式設計：手機 */
+@media (max-width: 600px) {
+  .usr-horizontal-grid {
+    gap: 2rem;
+  }
+
+  .usr-case-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .usr-case-image {
+    min-height: 200px;
+  }
+
+  .usr-case-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .usr-case-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   文化的守護區塊：Grid 排版設定
+   ========================================= */
+.sustainability__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sustainability__grid .card--full-width {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .sustainability__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card--mural {
+  position: relative;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 文化守護區塊背景（與策略發展一致） */
+.section--culture-heritage {
+  position: relative;
+  background-image: url('img/2013-4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section--culture-heritage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.85) 100%);
+  z-index: 1;
+}
+
+.section--culture-heritage .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 彩繪牆圖片排列：緊密四連張 */
+.mural-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.mural-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .mural-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 文化的守護：第三個案例佔滿整行 */
+.sustainability__grid .card--full-width {
+  grid-column: 1 / -1; /* 佔據所有欄位 */
+}
+

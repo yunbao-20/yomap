@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>昔日後花園與校園記憶｜雲科．季節限定的記憶圖鑑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="回憶雲科大那段停車免費、居民自由進出的無牆時光。這裡曾是斗六人的後花園，承載著無數家庭的週末回憶。">
+  <link rel="stylesheet" href="css/campus-life.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav__inner container">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__brand-title">雲科．記憶圖鑑</span>
+          <span class="nav__brand-subtitle">YunTech Memory Archive</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="about.html" class="nav__link">關於這裡</a></li>
+          <li><a href="campus-life.html" class="nav__link nav__link--active">校園記憶</a></li>
+          <li><a href="sustainability-usr.html" class="nav__link">在地連結</a></li>
+          <li><a href="academics.html" class="nav__link">設計職人</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--campus">
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__text">
+          <p class="page-hero__eyebrow">THE SHARED GARDEN</p>
+          <h1 class="page-hero__title">昔日的後花園</h1>
+          <p class="page-hero__subtitle">
+            還記得嗎？那個不用換證、停車免費的年代。<br>
+            傍晚的微風中，校園裡充滿了附近居民散步的身影與孩子們的笑聲。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. 後花園的故事 -->
+    <section class="section section--campus section--campus-story">
+      <div class="container">
+        <div class="campus-memory-grid">
+          <article class="card card--with-image">
+            <img src="img/昔日後花園1.png" alt="雲科大校園綠地" class="card-image">
+            <h3 class="subsection__title">那段無牆的時光</h3>
+            <p>
+              在過去，雲科大的校園對斗六居民來說，就像是一座巨大的社區公園。
+              因為停車免費且校園開放，每到週末或傍晚，附近的家庭就會攜家帶眷來到這裡。
+            </p>
+          </article>
+
+          <article class="card card--with-image">
+            <img src="img/昔日後花園2.png" alt="校園休閒空間" class="card-image">
+            <h3 class="subsection__title">共享的記憶空間</h3>
+            <p>
+              老師的孩子們在幼兒園下課後，會有一整群玩伴在草地上奔跑、踢球。
+              那時候的人很多，校園很大，人與人之間的距離卻很近。
+              這份「共融」的情感，是許多老斗六人與雲科校友共同的溫暖記憶。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 雲夢湖餵食小遊戲 -->
+    <section class="section section--game" id="duck-pond">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">雲夢湖的午後時光</h2>
+          <p class="section__description">
+            點擊湖面灑下麵包屑，享受與鴨子們的悠閒片刻。<br>
+            <span style="font-size: 0.9rem; opacity: 0.7;">(沒有計分，只有療癒)</span>
+          </p>
+        </header>
+        <div class="game-wrapper">
+          <svg id="pond-svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#e0f7fa;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#b2ebf2;stop-opacity:1" />
+              </linearGradient>
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                <feOffset dx="1" dy="2" result="offsetblur" />
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.3" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#waterGradient)" rx="20" ry="20" />
+            
+            <circle cx="100" cy="80" r="15" fill="#80deea" opacity="0.5" />
+            <circle cx="700" cy="300" r="25" fill="#80deea" opacity="0.5" />
+            <path d="M50,350 Q100,380 150,350" stroke="#80deea" stroke-width="3" fill="none" opacity="0.6"/>
+            <g id="game-layer"></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 記憶中的場景 (原設施轉化) -->
+    <section class="section section--campus">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">記憶中的場景</h2>
+          <p class="section__description">
+            這些熟悉的校園角落，都曾是我們生活故事的背景。
+          </p>
+        </header>
+
+        <div class="campus-grid">
+          <!-- 廣闊的綠地 -->
+          <article class="card">
+            <h3 class="subsection__title">廣闊的綠地</h3>
+            <img src="img/廣闊的綠地.png" alt="廣闊的綠地與藝術裝置" class="card-image">
+            <p>
+              <strong>58 公頃</strong>的校園裡，有著大片的草地與獨特的藝術裝置。
+              這裡是野餐的最佳地點，也是孩子們奔跑玩耍的天堂。
+              四季的更迭在這裡清晰可見，從春天的嫩綠到秋冬的落羽松，妝點著我們的回憶。
+            </p>
+          </article>
+          
+          <!-- 雲泰表演廳 -->
+          <article class="card">
+            <h3 class="subsection__title">雲泰表演廳</h3>
+            <img src="img/雲泰表演廳.jpg" alt="雲泰表演廳外觀" class="card-image">
+            <p>
+              現在宏偉的<strong>雲泰表演廳</strong>，前身是承載了無數典禮的大禮堂。
+              由在地企業豐泰文教基金會捐贈整建後，它不僅是國家級的藝術殿堂，
+              更延續了作為社區文化中心的使命，讓藝術走進雲林人的生活。
+            </p>
+          </article>
+
+          <!-- 創意工坊外的貓 -->
+           <article class="card">
+             <h3 class="subsection__title">創意工坊外的貓咪</h3>
+             <img src="img/cat.jpg" alt="創意工坊外的貓咪" class="card-image">
+             <p>
+               創意工坊外有一隻可愛的貓咪，牠基本會在櫃子上待著，成為設計系學生們最熟悉的夥伴。
+               設計系的學生們都很愛餵養牠，讓這隻貓咪成為工坊外的固定風景。
+               天氣冷的時候，貓咪會躲起來，但當天氣回暖，牠又會回到熟悉的櫃子上，繼續陪伴著學生們創作。
+             </p>
+           </article>
+
+          <article class="card">
+            <h3 class="subsection__title">雲夢湖的鴨子</h3>
+            <img src="img/duck.jpg" alt="雲夢湖的鴨子" class="card-image">
+            <p>
+              雲夢湖是校園中最受歡迎的景點之一，也是鴨子們活躍的場所。
+              這些可愛的鴨子悠游在湖面上，為校園增添了生動的氣息。
+              無論是學生還是居民，都喜歡在這裡觀察這些校園的小主人，享受與自然和諧共處的時光。
+            </p>
+          </article>
+          
+          <!-- 松鼠 -->
+           <article class="card">
+            <h3 class="subsection__title">校園裡的松鼠</h3>
+            <img src="img/squirrel.jpg" alt="校園裡的松鼠" class="card-image">
+            <p>
+              校園裡的松鼠會出現在樹上、草地裡，以及宿舍外圍。當你坐在樹下的石頭椅子上聽到聲響，那可能是牠們丟松果的聲音。
+              這些可愛的小動物為校園增添了自然的活力，但也要小心不要被掉落的松果砸到頭！
+            </p>
+          </article>
+
+          <!-- 鴿子 -->
+          <article class="card">
+            <h3 class="subsection__title">校園裡的鴿子</h3>
+            <img src="img/pigeon.jpg" alt="校園裡的鴿子" class="card-image">
+            <p>
+              在學校範圍內，你會頻繁聽到「嗚咕咕」的聲音，那都是鴿子。這些鴿子是校園裡常見的鳥類，為校園增添了自然的聲音。
+              學校的感應門，正是為了防止鴿子闖進室內而設置的，讓這些可愛的鳥類能夠在校園中自由活動，同時保持室內空間的整潔。
+            </p>
+          </article>
+
+          <!-- 烏龜 -->
+          <article class="card">
+            <h3 class="subsectiontitle">馬路上的烏龜</h3>
+            <img src="img/turtle.jpg" alt="馬路上的烏龜" class="card-image">
+            <p>
+              在學校附近，你會偶爾看到大烏龜，有時候在馬路中間，有時候在停車場，有時候在趴在石頭上曬太陽。
+              這些不期而遇的驚喜，不僅是校園生態的日常，更是我們與自然最親近的距離。
+            </p>
+          </article>
+
+          <!-- 大笨鳥 -->
+          <article class="card">
+            <h3 class="subsectiontitle">黑冠麻鷺(大笨鳥)</h3>
+            <img src="img/Gorsachius.png" alt="黑冠麻鷺" class="card-image">
+            <p>
+              在匆忙趕課的早晨，或是悠閒的午後，你是否曾在校園的樹蔭草皮下，看見一尊褐色的「雕像」
+              這就是我們校園的地下吉祥物，俗稱「大笨鳥」的黑冠麻鷺。
+            </p>
+          </article>
+
+          <!-- 狗 -->
+          <article class="card">
+            <h3 class="subsection__title">汪汪</h3>
+            <img src="img/dog.jpg" alt="汪汪" class="card-image">
+            <p>
+              在我們的校園裡，有一群特殊的「資深學生」。牠們不用繳學費、不用趕點名，
+              也不必為了期中考熬夜，卻擁有全校最高的地位與人氣。牠們，就是守護我們校園的<strong>校狗大隊</strong>。
+            </p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 社團與活力 - 跑馬燈效果 -->
+    <section class="section section--student-activities">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">充滿活力的校園節奏</h2>
+          <p class="section__description">
+            超過 <strong>70 個學生社團</strong> 在這裡活動<br>從音樂聲到練舞的節拍，
+            為這座寧靜的「後花園」注入了青春的躁動。
+          </p>
+        </header>
+      </div>
+
+      <!-- 跑馬燈容器 -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+          <!-- 第一組圖片 -->
+          <div class="marquee-item"><img src="img/stu05.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu11.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu03.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu14.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu01.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu08.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu12.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu07.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu10.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu04.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu13.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu02.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu09.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu06.png" alt="學生社團活動"></div>
+
+          <!-- 第二組圖片（重複） -->
+          <div class="marquee-item"><img src="img/stu05.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu11.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu03.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu14.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu01.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu08.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu12.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu07.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu10.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu04.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu13.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu02.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu09.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu06.png" alt="學生社團活動"></div>
+
+          <!-- 第三組圖片（重複） -->
+          <div class="marquee-item"><img src="img/stu05.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu11.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu03.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu14.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu01.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu08.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu12.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu07.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu10.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu04.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu13.jpg" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu02.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu09.png" alt="學生社團活動"></div>
+          <div class="marquee-item"><img src="img/stu06.png" alt="學生社團活動"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p class="footer__title">雲科．季節限定的記憶圖鑑</p>
+        <p class="footer__text">© 2025 YunTech Memory Archive. All Rights Reserved.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__subtitle"><a target="_blank" href="app/app.html">雲坐標</a></h3>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="campus-life.html">昔日後花園</a></li>
+          <li><a href="academics.html">深夜竹構</a></li>
+          <li><a href="sustainability-usr.html">在地故事</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<style>
+  /* 後花園故事背景 */
+  .section--campus-story {
+    position: relative;
+    background-image: url('img/campus-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 視差效果 */
+  }
+  
+  /* 淡化背景的遮罩層 */
+  .section--campus-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* 白色半透明遮罩，讓背景變淡 */
+    z-index: 1;
+  }
+  
+  /* 確保內容在遮罩層上方 */
+  .section--campus-story .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 遊戲專屬樣式 */
+  .section--game {
+    background-color: #fcfcfc;
+    padding: 4rem 0;
+  }
+  .game-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 133, 130, 0.1);
+    background: #fff;
+    border: 4px solid #fff; /* 像相框一樣的邊框 */
+  }
+  #pond-svg {
+    width: 100%;
+    height: 400px; /* 這裡控制遊戲高度 */
+    cursor: crosshair; /* 讓滑鼠變成準心，增加互動感 */
+    display: block;
+    background-color: #e0f7fa;
+    touch-action: none; /* 防止手機點擊時縮放 */
+  }
+  /* 鴨子樣式 */
+  .duck-group {
+    transition: transform 0.1s linear; /* 平滑移動 */
+    filter: url(#shadow);
+  }
+  .duck-body { fill: #ffffff; }
+  .duck-wing { fill: #f0f0f0; }
+  .duck-beak { fill: #ffb74d; } /* 橘黃色嘴巴 */
+  .duck-eye { fill: #333; }
+  /* 麵包屑樣式 */
+  .crumb {
+    fill: #d98c2a; /* 焦糖色 */
+    animation: sink 2s forwards;
+  }
+  /* 吃到的愛心特效 */
+  .heart {
+    fill: #ff6b6b;
+    animation: floatUp 1s ease-out forwards;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-30px) scale(1.2); opacity: 0; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const svg = document.getElementById('pond-svg');
+    const gameLayer = document.getElementById('game-layer');
+    const width = 800; // SVG viewBox 寬度
+    const height = 400; // SVG viewBox 高度
+    let ducks = [];
+    let foods = [];
+    const DUCK_COUNT = 5;
+
+    // 鴨子類別
+    class Duck {
+      constructor(id) {
+        this.id = id;
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.angle = Math.random() * 360;
+        this.speed = 0.5 + Math.random() * 0.5; // 閒晃速度
+        this.state = 'idle'; // idle, chasing
+        this.targetFood = null;
+        
+        // 建立鴨子 SVG 元素
+        this.el = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        this.el.setAttribute("class", "duck-group");
+        this.el.innerHTML = `
+          <ellipse cx="0" cy="5" rx="18" ry="10" class="duck-body" />
+          <circle cx="12" cy="-2" r="8" class="duck-body" />
+          <path d="M18,-2 L24,1 L18,4 Z" class="duck-beak" />
+          <circle cx="14" cy="-4" r="1.5" class="duck-eye" />
+          <ellipse cx="-5" cy="6" rx="8" ry="4" class="duck-wing" />
+        `;
+        gameLayer.appendChild(this.el);
+        this.updateView();
+      }
+
+      update() {
+        // 1. 尋找食物邏輯
+        if (foods.length > 0 && this.state === 'idle') {
+          // 找到最近的食物
+          let minDist = Infinity;
+          let closestFood = null;
+          foods.forEach(f => {
+            const dx = f.x - this.x;
+            const dy = f.y - this.y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if(dist < minDist) {
+              minDist = dist;
+              closestFood = f;
+            }
+          });
+          if (closestFood && minDist < 300) { // 只看得到的範圍
+            this.state = 'chasing';
+            this.targetFood = closestFood;
+          }
+        }
+
+        // 2. 移動邏輯
+        if (this.state === 'chasing' && this.targetFood && foods.includes(this.targetFood)) {
+          // 追逐模式
+          const dx = this.targetFood.x - this.x;
+          const dy = this.targetFood.y - this.y;
+          const angleToFood = Math.atan2(dy, dx) * 180 / Math.PI;
+          
+          // 平滑轉向
+          this.angle = this.lerpAngle(this.angle, angleToFood, 0.05);
+          this.speed = 2.5; // 加速衝過去
+
+          // 判斷是否吃到
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 15) {
+            this.eat(this.targetFood);
+          }
+        } else {
+          // 閒晃模式
+          this.state = 'idle';
+          this.speed = 0.8;
+          // 偶爾隨機轉向
+          if (Math.random() < 0.02) {
+            this.angle += (Math.random() - 0.5) * 90;
+          }
+          
+          // 邊界反彈
+          if (this.x < 20 || this.x > width - 20) this.angle = 180 - this.angle;
+          if (this.y < 20 || this.y > height - 20) this.angle = -this.angle;
+        }
+
+        // 更新座標
+        const rad = this.angle * Math.PI / 180;
+        this.x += Math.cos(rad) * this.speed;
+        this.y += Math.sin(rad) * this.speed;
+        this.updateView();
+      }
+
+      eat(food) {
+        // 移除食物
+        const index = foods.indexOf(food);
+        if (index > -1) {
+          foods.splice(index, 1);
+          if(food.el.parentNode) food.el.parentNode.removeChild(food.el);
+        }
+        
+        // 顯示愛心
+        showHeart(this.x, this.y - 15);
+        this.state = 'idle';
+      }
+
+      updateView() {
+        // SVG 旋轉與位移
+        this.el.setAttribute("transform", `translate(${this.x}, ${this.y}) rotate(${this.angle})`);
+      }
+      
+      lerpAngle(a, b, t) {
+        const d = b - a;
+        return a + ((((d + 180) % 360) - 180) * t); // 處理角度 360->0 的突變
+      }
+    }
+
+    // 初始化鴨子
+    for(let i=0; i<DUCK_COUNT; i++) {
+      ducks.push(new Duck(i));
+    }
+
+    // 點擊投餵
+    svg.addEventListener('click', (e) => {
+      // 轉換座標 (處理 RWD 縮放問題)
+      const pt = svg.createSVGPoint();
+      pt.x = e.clientX;
+      pt.y = e.clientY;
+      const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+      createFood(svgP.x, svgP.y);
+    });
+
+    function createFood(x, y) {
+      const el = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      el.setAttribute("cx", x);
+      el.setAttribute("cy", y);
+      el.setAttribute("r", 4);
+      el.setAttribute("class", "crumb");
+      gameLayer.insertBefore(el, gameLayer.firstChild); // 食物在鴨子下面
+      
+      foods.push({ x, y, el });
+    }
+
+    function showHeart(x, y) {
+      const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      group.setAttribute("transform", `translate(${x}, ${y})`);
+      group.innerHTML = `<path d="M0 0 Q-5 -5 -10 0 T0 10 T10 0 T0 0" class="heart" />`; // 簡易心型
+      svg.appendChild(group); // 加在最上層
+      
+      // 動畫結束後移除
+      setTimeout(() => {
+        if(group.parentNode) group.parentNode.removeChild(group);
+      }, 1000);
+    }
+
+    // 遊戲迴圈
+    function gameLoop() {
+      ducks.forEach(duck => duck.update());
+      requestAnimationFrame(gameLoop);
+    }
+    gameLoop();
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+

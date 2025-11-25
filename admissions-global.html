@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>國際視野｜雲科．季節限定的記憶圖鑑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="雲科大連結世界的窗口。透過國際交流與合作，讓雲林的孩子看見世界，也讓世界的精彩走進雲林。">
+  <link rel="stylesheet" href="css/admissions-global.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav__inner container">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__brand-title">雲科．記憶圖鑑</span>
+          <span class="nav__brand-subtitle">YunTech Memory Archive</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="about.html" class="nav__link">關於這裡</a></li>
+          <li><a href="campus-life.html" class="nav__link">校園記憶</a></li>
+          <li><a href="sustainability-usr.html" class="nav__link">在地連結</a></li>
+          <li><a href="academics.html" class="nav__link">設計職人</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--admissions">
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__text">
+          <p class="page-hero__eyebrow">GLOBAL CONNECTION</p>
+          <h1 class="page-hero__title">從雲林看見世界</h1>
+          <p class="page-hero__subtitle">
+            這裡不只是雲林的雲科，也是世界的雲科。<br>
+            我們搭建起通往全球的橋樑，讓在地的故事與國際的視野在這裡交會。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. 連結全球 -->
+    <section class="section section--admissions">
+      <div class="container">
+        <article class="card">
+          <h3 class="subsection__title">世界的夥伴</h3>
+          <img src="img/national_family.jpg" alt="雲科大國際合作夥伴" class="card-image-banner">
+          <p>
+            雲科大的足跡遍布全球 <strong>41 個國家</strong>，與超過 <strong>350 所</strong> 大學建立了姊妹校關係。
+            這意味著，在斗六唸書的學生，隨時都有機會飛往世界各地交換、實習，
+            將異國的文化養分帶回這片土地。
+          </p>
+          <a href="https://tdx.yuntech.edu.tw/index.php/overseas/2023-08-31-07-55-36" target="_blank" class="btn btn--primary" style="margin-top: 1rem; display: inline-block; text-decoration: none;">
+            連結全球
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. 國際榮耀 (原學生榮耀移至此或簡化) -->
+    <section class="section section--admissions">
+      <div class="container">
+        <div class="admissions__grid">
+          <article class="card">
+            <h3 class="subsection__title">國際發明舞台上的光芒</h3>
+            <img src="img/national_clubs.jpg" alt="雲科大師生在國際發明展展位上" class="card-image">
+            <p>
+              在瑞士日內瓦、德國紐倫堡、馬來西亞 ITEX 等國際發明展上，
+              經常能看到雲科大師生披著國旗領獎的身影。
+              他們用創意與技術證明，來自雲林的設計與發明，擁有改變世界的力量。
+            </p>
+            <button class="btn btn--primary" onclick="openAwardsModal()" style="margin-top: 1rem;">
+              查看得獎紀錄
+            </button>
+          </article>
+
+          <article class="card">
+            <h3 class="subsection__title">校園裡的小地球村</h3>
+            <img src="img/national_students.jpg" alt="外籍生大合照" class="card-image" loading="lazy">
+            <p>
+              走在校園裡，你可能會聽到英語、日語、印尼語或越南語的交談聲。
+              來自世界各地的國際學生，讓雲科大成為一個多元文化共融的小地球村。
+              各種文化節慶與交流活動，豐富了這座城市的文化底蘊。
+            </p>
+            <button class="btn btn--primary" onclick="openGlobalVillageModal()" style="margin-top: 1rem;">
+              了解更多
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 國際榮耀彈出式視窗 -->
+  <div id="awardsModal" class="modal">
+    <div class="modal__overlay" onclick="closeAwardsModal()"></div>
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2 class="modal__title">🏆 國際榮耀得獎紀錄</h2>
+        <button class="modal__close" onclick="closeAwardsModal()" aria-label="關閉視窗">×</button>
+      </div>
+      <div class="modal__body" id="awardsContent">
+        <!-- 得獎紀錄內容將由 JavaScript 動態生成 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 小地球村彈出式視窗 -->
+  <div id="globalVillageModal" class="modal">
+    <div class="modal__overlay" onclick="closeGlobalVillageModal()"></div>
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2 class="modal__title">🌍 校園裡的小地球村</h2>
+        <button class="modal__close" onclick="closeGlobalVillageModal()" aria-label="關閉視窗">×</button>
+      </div>
+      <div class="modal__body" id="globalVillageContent">
+        <!-- 內容將由 JavaScript 動態生成 -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p class="footer__title">雲科．季節限定的記憶圖鑑</p>
+        <p class="footer__text">© 2025 YunTech Memory Archive. All Rights Reserved.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__subtitle"><a target="_blank" href="app/app.html">雲坐標</a></h3>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="campus-life.html">昔日後花園</a></li>
+          <li><a href="academics.html">深夜竹構</a></li>
+          <li><a href="sustainability-usr.html">在地故事</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 得獎紀錄資料
+    const awardsData = {
+      "2025": [
+        {
+          competition: "日本東京創新天才國際發明展",
+          englishName: "Tokyo International Invention Expo",
+          results: "7金、9銀（台灣代表團成績最優）",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "應用於邊緣運算平台AI模型的加密保護機制",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "空拍機結合AIoT技術應用於杜絕登革熱傳播",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "具自發電奈米銀線/聚偏二氟乙烯/聚二甲基矽氧烷類電子皮膚",
+              team: "電子工程系 陳錫釗教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "基於WO₃ NPs/MoO₃異質接面的雙酵素電流式乙醯膽鹼低檢測限感測器",
+              team: "電子工程系 賴志賢教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "具神經型態運算特性之 Cu/STO/FTO 突觸元件開發",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "基於熱影像與AI檢測的車輛怠速違規監控系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "FPGA實現改裝排氣管影像與聲源辨識系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "整合肌電訊號與骨架偵測技術的應用與肌肉疲勞監測系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "任意樂器人聲音色轉換系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "基於深度學習全天候工廠智慧判煙監控系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "手機即時AI辨識應用於機車定檢稽查系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "紫外光增強具有黑磷烯修飾濺鍍氧化鋅薄膜之氫離子感測器",
+              team: "電子工程系 賴志賢教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "深度學習驅鳥技術守護公共衛生與環境永續",
+              team: "電機工程系 陳靜茹助理教授團隊"
+            }
+          ],
+          newsLink: "https://www.cna.com.tw/postwrite/chi/401483",
+          newsText: "中央社：日本東京創新天才發明展 雲科大勇奪7金9銀佳績"
+        },
+        {
+          competition: "馬來西亞 MTE 國際發明展",
+          englishName: "Malaysia MTE International Invention Expo",
+          results: "1金、1銅",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "廚餘轉化系統",
+              team: "產業科技學士學位學程 潘志龍助理教授團隊"
+            },
+            {
+              medal: "銅牌",
+              title: "調控鍶/鈦化學計量比以提升鈦酸鍶一次寫入多次讀取電阻式記憶體之記憶效能",
+              team: "電子工程系 許智傑教授團隊"
+            }
+          ],
+          newsLink: "https://www.cna.com.tw/postwrite/chi/394958",
+          newsText: "中央社：馬來西亞MTE國際發明展 雲科大勇奪1金1銅"
+        },
+        {
+          competition: "馬來西亞 ITEX 國際發明展",
+          englishName: "Malaysia ITEX International Invention Expo",
+          results: "1金、1銀、1銅",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "基於天花板邊界視角視覺式定位建圖技術的自主工廠搬運堆高機",
+              team: "電機工程系 何前程副教授指導 碩士生 郭立智"
+            },
+            {
+              medal: "銀牌",
+              title: "基於無需標記特徵對位式視覺伺服技術的自主農業採收搬運車",
+              team: "電機工程系 何前程副教授指導 碩士生 陳英豪"
+            },
+            {
+              medal: "銅牌",
+              title: "蟲蛀洞辨識系統及其方法",
+              team: "電機工程系 洪崇文教授指導 碩士生 呂為鈞、Texas Instruments應用工程師 周雅淳、文化資產維護系 曾永寬教授"
+            }
+          ],
+          newsLink: "https://n.yam.com/Article/20250611928195",
+          newsText: "雲林科技大學勇奪ITEX國際發明展1金1銀1銅 展現智慧自動化與農業創新實力"
+        }
+      ],
+      "2024": [
+        {
+          competition: "香港創新科技國際發明展",
+          englishName: "Hong Kong International Invention Innovation Contest",
+          results: "6金、2銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "改良一次性水系鋅錳電池之研發創新技術",
+              team: "化學工程與材料工程系 吳子和副教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "Ag/VOx/Al/n+-Si電阻式記憶體元件",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "創意家庭式氣耕植物栽培系統模組",
+              team: "環境與安全衛生工程系 萬騰州教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "功能增強的洗澡機",
+              team: "產業科技學士學位學程 潘志龍專案助理教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "模組式變速器",
+              team: "機械工程系 吳益彰教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "低電壓啟動之全固態無機電致變色元件",
+              team: "電子工程系 陳錫釗教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "釩氧化物晶體結構對水系鋅離子電池儲能性能的影響",
+              team: "化學工程與材料工程系 吳子和副教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "以熱氧化製程研製具多位元電阻轉換特性之氧化鎳電阻式記憶體",
+              team: "電子工程系 許智傑教授團隊"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-147/2019-04-10-08-06-92/item/11544-6-2",
+          newsText: "觀傳媒：香港創新科技發明展雲科大奪6金2銀"
+        },
+        {
+          competition: "韓國首爾國際發明展",
+          englishName: "Seoul International Invention Fair",
+          results: "2金、3銀、1銅",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "Energy Saver",
+              team: "設計學研究所 杜瑞澤教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "感溫及感壓床墊配合AIoT遠端照護系統",
+              team: "產業科技學士學位學程 潘志龍助理教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "利用鍶鋯氧化物作為電阻切換材料實現高切換比的電阻式隨機存取記憶體",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "STAND UP起身輔助坐墊",
+              team: "設計學研究所 杜瑞澤教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "創新農業應用：都會區微型氣耕蔬果栽培模組",
+              team: "環境與安全衛生工程系 萬騰州教授團隊"
+            },
+            {
+              medal: "銅牌",
+              title: "含二噻吩一吡咯和環戊聯噻吩聚合物於多顏色變化電致變色元件之應用",
+              team: "化學工程與材料工程系 吳知易教授團隊"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-147/2019-04-10-08-06-92/item/11506-2-3-1",
+          newsText: "雲科大官網：韓國首爾國際發明展 雲科大勇奪2金3銀1銅"
+        },
+        {
+          competition: "克羅埃西亞 INOVA 國際發明展",
+          englishName: "Croatia INOVA International Invention Fair",
+          results: "3金、1特別獎（英國國際大獎）",
+          highlights: [
+            {
+              medal: "金牌 & 特別獎",
+              title: "高光學對比智慧窗",
+              team: "化材系 吳知易教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "具扭矩調整功能之捲揚機磁性傳動機構",
+              team: "機械系 吳益彰教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "自整流記憶元件",
+              team: "電子系 許智傑教授團隊"
+            }
+          ],
+          newsLink: "https://www.tippa.org.tw/article_d.php?lang=tw&tb=6&id=4531",
+          newsText: "TIPPA：雲科大在克羅埃西亞國際發明展大放異彩"
+        },
+        {
+          competition: "澳門國際創新發明展",
+          englishName: "Macau International Innovation and Invention Expo",
+          results: "4金、4銀、1特別獎",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "Everglow Umbrella",
+              team: "設計學研究所 杜瑞澤教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "AI影像辨識科技執法、有害氣體感測、智慧空污門窗控制及LINE 訊息通知系統",
+              team: "電子工程系 夏世昌教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "Ag/SrO/n+-Si WORM元件",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "金牌 & 大會特別獎",
+              title: "以高效率旋塗法在可撓式基板上製造具有負電阻特性之可彎曲元件",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "永恆傘",
+              team: "設計學研究所 杜瑞澤教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "輕量化機器學習模型AI交通號誌影像辨識嵌入式系統",
+              team: "電子工程系 吳亦超副教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "用於檢測亞硝酸鈉之貴金屬修飾金屬有機框架",
+              team: "電子工程系 陳錫釗教授團隊"
+            },
+            {
+              medal: "銀牌",
+              title: "校園無人導覽車",
+              team: "電子工程系 蘇慶龍副教授團隊"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/11243-4-4-1",
+          newsText: "雲科大官網：澳門國際創新發明展雲科大勇奪4金4銀1特別獎"
+        },
+        {
+          competition: "日本東京創新天才國際發明展",
+          englishName: "Tokyo International Invention Expo",
+          results: "4金、3銀、1特別獎",
+          highlights: [
+            {
+              medal: "金牌 & 特別獎",
+              title: "智能約束帶",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "AI揚塵辨識抑制系統",
+              team: "電子工程系 王斯弘助理教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "鈦酸鋇電阻式隨機存取記憶體",
+              team: "電子工程系 許智傑教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "AI影像辨識科技執法、有害氣體感測、社群軟體訊息通知系統",
+              team: "電子工程系 夏世昌教授團隊"
+            }
+          ],
+          newsLink: "https://www.ner.gov.tw/news/6641d204d6e0d0002360a255",
+          newsText: "國立教育廣播電台：雲科大參與2024東京國際發明展獲4金3銀"
+        },
+        {
+          competition: "波蘭華沙國際發明展",
+          englishName: "IWIS - International Warsaw Invention Show",
+          results: "2金",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "具扭矩調整功能之捲揚機磁性傳動機構",
+              team: "機械系 吳益彰教授團隊"
+            },
+            {
+              medal: "金牌",
+              title: "二維層狀過渡金屬硫化物修飾氧化亞銅/氧化鋅奈米柱非酵素葡萄糖感測器",
+              team: "電子系 陳錫釗教授團隊"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-06-44/2019-04-10-08-06-64/item/13369-2",
+          newsText: "雲科大官網：波蘭國際發明展，本校榮獲2金"
+        }
+      ],
+      "2023": [
+        {
+          competition: "香港創新科技國際發明展",
+          englishName: "Hong Kong International Invention Innovation Contest",
+          results: "6金、3銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "以氧化銅奈米粒子修飾可撓式陣列型非酵素氧化鉬電壓式抗壞血酸生醫感測器",
+              team: "電子系 周榮泉教授（研究團隊：陳韋舜、李坤澤、賴志賢老師、楊博惠老師、郭柏佑老師）"
+            },
+            {
+              medal: "金牌",
+              title: "以化學氣相沉積二硫化鉬作為無白金之染料敏化太陽能電池對電極",
+              team: "電子系 周榮泉教授（研究團隊：陳柏豐、陳韋舜、楊博惠老師、郭柏佑老師、粘譽薰老師）"
+            },
+            {
+              medal: "金牌",
+              title: "以 1,3-雙(N-咔唑基)苯和聯噻吩共聚物作為電致變色陽極材料及其應用於製備長效轉換與高光學對比智慧窗",
+              team: "化材系 吳知易教授（研究團隊：郭仲文老師、何國賢老師、許禕凌、林楷閎、陳煒哲）"
+            },
+            {
+              medal: "金牌",
+              title: "手動與電動雙動力輸入之推桿式輪椅",
+              team: "機械系 吳益彰教授（研究團隊：陳泓瑋、陳冠中、涂家瑒、高培智、羅睿承）"
+            },
+            {
+              medal: "金牌",
+              title: "一種提升電阻式記憶體穩定性的界面工程",
+              team: "電子系 廖哲浩教授（研究團隊：許智傑老師、黃柏瑞、蔡宗霖、吳文欽、張文強）"
+            },
+            {
+              medal: "金牌",
+              title: "以3D列印技術設計製造PDMS微流體裝置用於尿素動態檢測",
+              team: "電子系 郭柏佑教授（研究團隊：周榮泉老師、賴志賢老師、王泰輝、許明泰、廖啟瀚）"
+            },
+            {
+              medal: "銀牌",
+              title: "高光譜影像辨識於食品品質分級之應用以香菇產地為例",
+              team: ""
+            },
+            {
+              medal: "銀牌",
+              title: "黑磷烯修飾二氧化鈦延伸式閘極場效電晶體葡萄糖感測器",
+              team: ""
+            },
+            {
+              medal: "銀牌",
+              title: "以低成本溶膠-凝膠法製備氧化釩新興材料之電阻式記憶體",
+              team: "電子系 許智傑教授（研究團隊：王焌惟、溫修銘、陳柏宏、張宏濬、胡守安）"
+            }
+          ],
+          newsLink: "https://www.cna.com.tw/postwrite/chi/359296",
+          newsText: "中央社：香港國際發明展 雲科大金光閃閃"
+        },
+        {
+          competition: "瑞士日內瓦國際發明展",
+          englishName: "Geneva International Exhibition of Inventions",
+          results: "1金、1銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "新型以矽酸鉍改質的染料敏化太陽電池",
+              team: "化材系 粘譽薰教授"
+            },
+            {
+              medal: "銀牌",
+              title: "DIY電動手工具起子組收納盒",
+              team: "工設系 張景旭教授"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/item/8507-2023-1-1",
+          newsText: "雲科大官網：賀2023瑞士日內瓦國際發明展獲1金1銀"
+        },
+        {
+          competition: "烏克蘭國際發明展",
+          englishName: "Ukraine International Invention Fair",
+          results: "5金、2銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "具多重目標追蹤、定位整合雙模態深度學習技術應用於反無人機預警系統",
+              team: "機械系 鄭秦亦教授（研究團隊：林致維、Ilham Saputra、石承恩）"
+            },
+            {
+              medal: "金牌",
+              title: "新型PbTiO3/TiO2/g-C3N4奈米光觸媒及其在可見光下降解的應用",
+              team: "化材系 粘譽薰教授（研究團隊：林彥良、黃婷鈺）"
+            },
+            {
+              medal: "金牌",
+              title: "開發含TiO2/Bi2SiO5可見光光觸媒之超細纖維膜",
+              team: "化材系 粘譽薰教授（研究團隊：劉明昇、賴眉妙）"
+            },
+            {
+              medal: "金牌",
+              title: "不同閘極功函數對於非晶氧化銦鎵鋅電晶體之電性研究",
+              team: "電子系 許智傑教授（研究團隊：江昌嶽教授、胡守安、黃柏皓、王焌惟、黃柏瑞）"
+            },
+            {
+              medal: "金牌",
+              title: "低成本溶膠-凝膠法製備高開關比之氧化鍶電阻式記憶體",
+              team: "電子系 許智傑教授（研究團隊：石健忠教授、張宏濬、吳文欽、張文強、陳柏宏）"
+            },
+            {
+              medal: "銀牌",
+              title: "水熱法合成氧化鎳奈米結構修飾反式鈣鈦礦太陽能電池",
+              team: "電子系 陳錫釗教授（研究團隊：王彥淇）"
+            },
+            {
+              medal: "銀牌",
+              title: "多功能舒壓椅具",
+              team: "設學所 蔡登傳教授（研究團隊：蕭伃廷）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/item/9193-2023-5-2",
+          newsText: "觀傳媒：2023年烏克蘭國際發明展雲科大勇奪5金2銀"
+        },
+        {
+          competition: "澳門國際創新發明展",
+          englishName: "Macau International Innovation and Invention Expo",
+          results: "6金、2銀、3特別獎",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "以氧化鋅緻密層抑制染料敏化太陽能電池光陽極之攔截反應",
+              team: "電子系 周榮泉教授（研究團隊：粘譽薰教授、賴志賢教授、楊博惠教授、陳柏豐、徐瑞鴻、陳韋舜）"
+            },
+            {
+              medal: "金牌 & 印尼發明協會特別獎",
+              title: "具有以黑磷烯修飾氧化銦鎵鋅感測膜之pH感測器",
+              team: "電子系 賴志賢教授（研究團隊：周榮泉教授、楊博惠教授、粘譽薰教授、郭柏佑教授、陳如權）"
+            },
+            {
+              medal: "金牌",
+              title: "以黑磷量子點與N719染料共敏化之新型染料敏化太陽能電池",
+              team: "電子系 賴志賢教授（研究團隊：周榮泉教授、楊博惠教授、粘譽薰教授、郭柏佑教授、戴清福、林紫燕）"
+            },
+            {
+              medal: "金牌",
+              title: "低電壓啟動之全固態電致變色元件",
+              team: "電子系 陳錫釗教授（研究團隊：嚴瑜宏、高浩維、莊于萱）"
+            },
+            {
+              medal: "金牌",
+              title: "醫療輔具之模組式變速器",
+              team: "機械系 吳益彰教授（研究團隊：郭子維、陳冠中、涂家瑒、高培智、羅睿承）"
+            },
+            {
+              medal: "金牌",
+              title: "暖手杖",
+              team: "設學所 杜瑞澤教授（研究團隊：陳姿吟）"
+            },
+            {
+              medal: "銀牌 & 香港YAN CHAI STEAM FAIRE 特別獎 & 泛長江三角洲青少年創客聯盟特別獎",
+              title: "智駕：智慧城市移動解決方案",
+              team: "電子系 蘇慶龍教授（研究團隊：陳祐廷、顏俊儀、黃彥鈞）"
+            },
+            {
+              medal: "銀牌",
+              title: "餐桌助行器",
+              team: "設學所 杜瑞澤教授（研究團隊：王橙晰）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/9413-6-2-3",
+          newsText: "雲科大官網：澳門國際發明展雲科大榮獲6金2銀3特別獎"
+        },
+        {
+          competition: "俄羅斯阿基米德國際發明展",
+          englishName: "Archimedes International Invention Fair",
+          results: "1金",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "無人飛行載具結合人工智慧應用於農耕地景辨識",
+              team: ""
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-06-44/2019-04-10-08-06-64/item/8429-2023-1",
+          newsText: "雲科大官網：賀2023年俄羅斯阿基米德發明展獲1金"
+        }
+      ],
+      "2022": [
+        {
+          competition: "俄羅斯阿基米德國際發明展",
+          englishName: "Archimedes International Invention Fair",
+          results: "2金、3銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "疫級玩家",
+              team: "視傳系"
+            },
+            {
+              medal: "金牌",
+              title: "應用於奈米定位平台之差動式雷射編碼器",
+              team: "機械系"
+            },
+            {
+              medal: "銀牌",
+              title: "永續能源消毒裝置",
+              team: "創設系 彭立勛教授（研究團隊：林愛詠）"
+            },
+            {
+              medal: "銀牌",
+              title: "珊瑚復育模組",
+              team: "創設所 杜瑞澤教授（研究團隊：郭致維）"
+            },
+            {
+              medal: "銀牌",
+              title: "以3,6-雙(咔唑-9-基)-9-(2-乙基-己基)-9H-咔唑和2,2'-二噻吩合成共聚物作為電致變色陽極材料及其應用於製備長效轉換穩定性佳與高光學對比智慧窗",
+              team: "化材系 吳知易教授（研究團隊：郭仲文教授、張恩得、江佳樺、葉雅君、李佩容）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/6789-2-3",
+          newsText: "雲科大官網：俄羅斯阿基米德發明展雲科大榮獲2金3銀"
+        },
+        {
+          competition: "波蘭華沙國際發明展",
+          englishName: "IWIS - International Warsaw Invention Show",
+          results: "3金、1銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "便攜式緊急止血貼",
+              team: ""
+            },
+            {
+              medal: "金牌",
+              title: "氧化鋅錫薄膜電晶體改良",
+              team: ""
+            },
+            {
+              medal: "金牌",
+              title: "輪胎文字動態辨識系統",
+              team: ""
+            },
+            {
+              medal: "銀牌",
+              title: "冰屋",
+              team: "創設所 杜瑞澤教授（研究團隊：黃姵綺）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/7700-3-1",
+          newsText: "雲科大官網：波蘭國際發明展雲科大勇奪3金1銀"
+        },
+        {
+          competition: "澳門國際創新發明展",
+          englishName: "Macau International Innovation and Invention Expo",
+          results: "3金、2銀、2特別獎",
+          highlights: [
+            {
+              medal: "金牌 & 美國特別獎",
+              title: "具拉伸特性之電活性高分子微型超級電容器",
+              team: "化材系 石健忠教授（研究團隊：李昀珊、盧詩婷、劉勇叡）"
+            },
+            {
+              medal: "金牌 & 日本特別獎",
+              title: "使用3,6-雙(咔唑-9-基)-9-(2-乙基-己基)-9H-咔唑和環戊二噻吩酮合成共聚物及其製備高光學對比智慧窗",
+              team: "化材系 吳知易教授（研究團隊：郭仲文、江佳樺、葉雅君、張恩得、呂珮榕）"
+            },
+            {
+              medal: "金牌",
+              title: "模組式雙動力輸入裝置之推桿式輪椅",
+              team: "機械系 吳益彰教授（研究團隊：陳泓瑋、吳宗祐、游恩瑞、馮進溢）"
+            },
+            {
+              medal: "銀牌",
+              title: "居家多功能健身器材",
+              team: "工設系 馬永川教授（研究團隊：吳冠逸、王敬淳）"
+            },
+            {
+              medal: "銀牌",
+              title: "AI智能窗戶",
+              team: "前瞻學程 章詠湟教授（研究團隊：電子系 黃建盛教授、鄭智仁、楊東程、陳彥宇）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/7677-2022-10-18-06-58-30",
+          newsText: "雲科大官網：澳門國際發明展雲科大穿金戴銀"
+        },
+        {
+          competition: "韓國首爾國際發明展",
+          englishName: "Seoul International Invention Fair",
+          results: "2金、1銀、2銅",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "基於生成對抗網路之適地性美食推薦系統",
+              team: "工管系 陳奕中教授（研究團隊：賴睿涵、詹宜諠、巫玉如、向冠全）"
+            },
+            {
+              medal: "金牌",
+              title: "兼具太陽能、風力及水力發電之裝置",
+              team: "產業科技學士學位學程 潘志龍教授、環安系 溫志超教授（研究團隊：施仁傑、張維芝、黃翊童、羅巧玟）"
+            },
+            {
+              medal: "銀牌",
+              title: "高光譜雞蛋品質檢測-以瑕疵與新鮮度為例",
+              team: "資工系 陳士煜教授（研究團隊：柯祉伊、徐楷勛）"
+            },
+            {
+              medal: "銅牌",
+              title: "模組式雙輸入輔助自行車助力器",
+              team: "機械系 吳益彰教授（研究團隊：陳俊榮、吳宗祐、馮進溢、游恩瑞）"
+            },
+            {
+              medal: "銅牌",
+              title: "無人飛行載具結合人工智慧應用於農耕地景辨識",
+              team: "電機系 陳靜茹教授、助理研究員：陳榮宗(農業委員會特有生物研究保育中心)（研究團隊：孫崧瑋、李承翰、林承翰、孫凱文、周品宏）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-06-44/2019-04-10-08-06-64/item/7882-2022-2-1-2",
+          newsText: "雲科大官網：2022韓國首爾國際發明展獲2金1銀2銅"
+        }
+      ],
+      "2021": [
+        {
+          competition: "瑞士日內瓦國際發明展 (Special Edition 2021)",
+          englishName: "Geneva International Exhibition of Inventions",
+          results: "1金、2銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "奈米纖維鋰電池隔離膜",
+              team: "化材系 粘譽薰教授"
+            },
+            {
+              medal: "銀牌",
+              title: "智慧窗技術",
+              team: "化材系 吳知易教授"
+            },
+            {
+              medal: "銀牌",
+              title: "輪椅模組式驅動機構",
+              team: "機械系 吳益彰教授"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/5190-1-2",
+          newsText: "雲科大官網：日內瓦發明展 雲科大榮獲1金2銀"
+        },
+        {
+          competition: "韓國首爾國際發明展",
+          englishName: "Seoul International Invention Fair",
+          results: "2金、1銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "自動化齒輪檢測儀",
+              team: "機械系 王永成教授、張中平教授（研究團隊：張軒誠、張富惇、邱柏誠）"
+            },
+            {
+              medal: "金牌",
+              title: "基於HRV之非接觸式測謊系統",
+              team: "前瞻學程 張宏昌教授、資管系 古東明教授（研究團隊：張凱傑、林承毅）"
+            },
+            {
+              medal: "銀牌",
+              title: "磁性無段變速器",
+              team: "機械系 吳益彰教授（研究團隊：詹謹聰、黃聖翰、李冠毅）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-06-44/2019-04-10-08-06-64/item/6379-2021-2-1",
+          newsText: "雲科大官網：賀2021韓國首爾國際發明展獲2金1銀"
+        },
+        {
+          competition: "澳門國際創新發明展",
+          englishName: "Macau International Innovation and Invention Expo",
+          results: "2金、1銀",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "珊瑚復育模組",
+              team: "創設系 杜瑞澤教授"
+            },
+            {
+              medal: "金牌",
+              title: "高光學對比智慧窗",
+              team: "化材系 吳知易教授"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/6401-2-1",
+          newsText: "雲科大官網：澳門國際發明展雲科大獲2金1銀"
+        }
+      ],
+      "2020": [
+        {
+          competition: "韓國首爾國際發明展",
+          englishName: "Seoul International Invention Fair",
+          results: "1金、2銀、2銅",
+          highlights: [
+            {
+              medal: "金牌",
+              title: "社區友善農業之竹構自然雞舍",
+              team: "建築系 賴明茂教授"
+            },
+            {
+              medal: "銀牌",
+              title: "雷射干涉校準儀",
+              team: "機械系 王永成教授（研究團隊：徐力弘、張中平、石逸杰、吳登琦）"
+            },
+            {
+              medal: "銀牌",
+              title: "模組式雙動力輸入裝置之推桿式輪椅",
+              team: "機械系 吳益彰教授（研究團隊：陳泓瑋、高思穎、黃聖翰、李冠毅）"
+            },
+            {
+              medal: "銅牌",
+              title: "融像協調不煩惱",
+              team: "電子系 黃建盛教授（研究團隊：苗新鳳、黃名辰、潘仲麒、張勝雄）"
+            },
+            {
+              medal: "銅牌",
+              title: "抑菌錫銀環保吸管",
+              team: "創設系 鄭月秀教授（研究團隊：陳禹方、胡朝綱）"
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-43/item/4802-2020-12-15-06-32-30",
+          newsText: "雲科大官網：雲科大韓國首爾發明展大放異彩"
+        },
+        {
+          competition: "馬來西亞 ITEX 國際發明展",
+          englishName: "Malaysia ITEX International Invention Expo",
+          results: "1銀",
+          highlights: [
+            {
+              medal: "銀牌",
+              title: "車體降溫裝置 CARER",
+              team: "設學所 杜瑞澤教授指導"
+            }
+          ],
+          newsLink: "https://ddp.yuntech.edu.tw/~ddp_d1j9t4tm1di/tw/news/show.php?num=67&unit=3",
+          newsText: "設計所榮獲2020年ITEX國際發明展銀獎"
+        }
+      ],
+      "2019": [
+        {
+          competition: "韓國首爾國際發明展",
+          englishName: "Seoul International Invention Fair",
+          results: "2金、2銀、4銅、1特別獎",
+          highlights: [
+            {
+              medal: "金牌 & 特別獎",
+              title: "玻璃基板量測方法及其裝置",
+              team: ""
+            },
+            {
+              medal: "金牌",
+              title: "飛天三角架",
+              team: "工業設計系 馬永川教授（研究團隊：林冠宇、孫靖翔）"
+            },
+            {
+              medal: "金牌",
+              title: "微細導線之製作方法",
+              team: "化學工程與材料科學系 劉博滔教授（研究團隊：王信壹、許昌貴）"
+            },
+            {
+              medal: "銀牌",
+              title: "應用於失智症早期患者的室內外擴增實境路徑導航與提醒便條輔具",
+              team: "電機工程系 何前程教授（研究團隊：黃于軒、侯琮瑜）"
+            },
+            {
+              medal: "銀牌",
+              title: "狹縫式針狀散熱鰭",
+              team: "機械工程系 許立傑教授（研究團隊：曾增耀）"
+            },
+            {
+              medal: "銅牌",
+              title: "共享駐點救護車",
+              team: "創意生活設計系 杜瑞澤教授（研究團隊：賴翊庭、許瀞分、李畇寬、呂姿萱、馮薏方）"
+            },
+            {
+              medal: "銅牌",
+              title: "創新型虛擬投影視力檢測裝置",
+              team: "電子工程系 黃建盛教授（研究團隊：張勝雄、管鴻、卓達雄、莊子霖、裘其軒、苗新鳳、林君豪）"
+            },
+            {
+              medal: "銅牌",
+              title: "磁珠與石墨烯修飾陣列型可撓式IGZO葡萄糖感測器",
+              team: "電子工程系 周榮泉教授（研究團隊：廖義宏老師、賴志賢老師、陳建勳、莊博仰、嚴孝傑、黃閔祥）"
+            },
+            {
+              medal: "銅牌",
+              title: "磁性無段變速器",
+              team: "機械工程系 吳益彰教授（研究團隊：沈廷豫、詹謹聰、蘇淯順、高思穎）"
+            }
+          ],
+          newsLink: "https://www.yuntech-csr.tw/tw/news/138/detail",
+          newsText: "雲科大CSR：2019年韓國首爾國際發明展"
+        },
+        {
+          competition: "澳門國際創新發明展",
+          englishName: "Macau International Innovation and Invention Expo",
+          results: "3金、2銀、1銅、1特別獎",
+          highlights: [
+            {
+              medal: "金牌 & 特別獎",
+              title: "模組式雙輸入輔助自行車助力器",
+              team: "機械系 吳益彰教授（波蘭發明協會特別獎）"
+            },
+            {
+              medal: "金牌",
+              title: "擴增實境下的視力檢測",
+              team: "電子系 黃建盛教授"
+            },
+            {
+              medal: "金牌",
+              title: "公車站站亭",
+              team: "創設系 杜瑞澤教授"
+            },
+            {
+              medal: "銀牌",
+              title: "含1,4-雙（（9H-咔唑-9-基）甲基）苯和甲醇基3,4-乙烯二氧噻吩經電合成共聚物作為可撓式電致變色元件陽極材料及其於長效轉換穩定性佳與高光學對比智慧窗之應用",
+              team: "化材系 吳知易教授（研究團隊：陳和瑞、林俞萱、劉展銓、何邵軒）"
+            },
+            {
+              medal: "銀牌",
+              title: "甜甜嬰幼兒餵藥器",
+              team: "創設系 杜瑞澤教授（研究團隊：賴翊庭、許瀞分、李畇寬、呂姿萱、馮薏方）"
+            },
+            {
+              medal: "銅牌",
+              title: "基於自編碼器方法之倒角刀具診斷系統",
+              team: "電機系 洪崇文教授（研究團隊：李威廷、謝佳勇）"
+            }
+          ],
+          newsLink: "https://www.yuntech-csr.tw/tw/news/139/detail",
+          newsText: "雲科大CSR：2019年澳門國際創新發明展"
+        },
+        {
+          competition: "馬來西亞 ITEX 國際發明展",
+          englishName: "Malaysia ITEX International Invention Expo",
+          results: "1銀、2銅",
+          highlights: [
+            {
+              medal: "銀牌",
+              title: "物聯網打火機聲源辨識系統",
+              team: ""
+            },
+            {
+              medal: "銅牌",
+              title: "可撓性 OLED 亮度增強技術",
+              team: ""
+            },
+            {
+              medal: "銅牌",
+              title: "居家輕運動坐墊",
+              team: ""
+            }
+          ],
+          newsLink: "https://www.yuntech.edu.tw/index.php/2019-07-25-11-32-12/2019-04-10-08-06-44/2019-04-10-08-06-64/item/2100-2019-1",
+          newsText: "雲科大官網：賀2019年馬來西亞國際創新發明展獲1銀2銅"
+        }
+      ]
+    };
+
+    // 解析獎牌數量
+    function parseMedalCount(results) {
+      const medals = { gold: 0, silver: 0, bronze: 0, special: 0 };
+      const goldMatch = results.match(/(\d+)金/);
+      const silverMatch = results.match(/(\d+)銀/);
+      const bronzeMatch = results.match(/(\d+)銅/);
+      const specialMatch = results.match(/(\d+)特別獎/);
+      if (goldMatch) medals.gold = parseInt(goldMatch[1]);
+      if (silverMatch) medals.silver = parseInt(silverMatch[1]);
+      if (bronzeMatch) medals.bronze = parseInt(bronzeMatch[1]);
+      if (specialMatch) medals.special = parseInt(specialMatch[1]);
+      return medals;
+    }
+
+    // 計算已顯示的獎牌數量
+    function countDisplayedMedals(highlights) {
+      const counts = { gold: 0, silver: 0, bronze: 0, special: 0 };
+      highlights.forEach(h => {
+        if (h.medal.includes('金牌')) counts.gold++;
+        if (h.medal.includes('銀牌')) counts.silver++;
+        if (h.medal.includes('銅牌')) counts.bronze++;
+        if (h.medal.includes('特別獎')) counts.special++;
+      });
+      return counts;
+    }
+
+    // 生成得獎紀錄內容
+    function generateAwardsContent() {
+      const contentDiv = document.getElementById('awardsContent');
+      let html = '';
+
+      // 按年份排序（從新到舊）
+      const years = Object.keys(awardsData).sort((a, b) => b - a);
+
+      years.forEach((year, yearIndex) => {
+        const yearId = `year-${year}`;
+        const competitions = awardsData[year];
+        const competitionCount = competitions.length;
+        const isLatestYear = yearIndex === 0; // 第一個年份是最新的
+        
+        if (isLatestYear) {
+          // 最新年份：直接展示
+          html += `<div class="awards-year-section awards-year-section--latest">
+            <div class="awards-year-header-latest">
+              <h3 class="awards-year-title">${year}年 得獎紀錄</h3>
+              <span class="year-competition-count">${competitionCount} 項比賽</span>
+            </div>
+            <div class="awards-year-content-latest">`;
+        } else {
+          // 一般年份：使用下拉式選單
+          html += `<div class="awards-year-section">
+            <div class="awards-year-header" onclick="toggleYearSection('${yearId}')">
+              <h3 class="awards-year-title">${year}年 得獎紀錄</h3>
+              <span class="year-toggle-icon" id="icon-${yearId}">▼</span>
+              <span class="year-competition-count">${competitionCount} 項比賽</span>
+            </div>
+            <div class="awards-year-content" id="${yearId}">`;
+        }
+
+        // 按比賽分組 - 橫向滑動卡片
+        html += `<div class="competitions-scroll-container">
+          <div class="competitions-scroll-track">`;
+        
+        competitions.forEach((comp, index) => {
+          const compId = `comp-${year}-${index}`;
+          const hasHighlights = comp.highlights && comp.highlights.length > 0;
+          
+          html += `<div class="awards-competition-card">
+            <div class="competition-header">
+              <div class="competition-header-info">
+                <h4 class="competition-name">${comp.competition}</h4>
+                <p class="competition-english">${comp.englishName}</p>
+                <span class="competition-results">${comp.results}</span>
+              </div>
+            </div>`;
+
+          if (hasHighlights) {
+            html += `<div class="competition-highlights-wrapper">
+              <div class="highlights-scroll-container-vertical">
+                <div class="highlights-scroll-track-vertical" id="track-${compId}">`;
+            comp.highlights.forEach((highlight, hIndex) => {
+              const medalClass = highlight.medal.includes('金牌') ? 'gold' : 
+                                 highlight.medal.includes('銀牌') ? 'silver' : 
+                                 highlight.medal.includes('銅牌') ? 'bronze' : 'special';
+              // 將 & 替換為 <br> 讓特別獎垂直排列
+              const medalText = highlight.medal.replace(/\s*&\s*/g, '<br>');
+              html += `<div class="highlight-card-vertical">
+                <span class="medal-badge medal-${medalClass}">${medalText}</span>
+                <div class="highlight-content">
+                  <strong>${highlight.title}</strong>
+                  ${highlight.team ? `<span class="highlight-team">${highlight.team}</span>` : ''}
+                </div>
+              </div>`;
+            });
+            html += `</div>
+              </div>
+              <div class="scroll-indicator">
+                <span class="scroll-hint">↑ 滑動查看更多獲獎作品 ↓</span>
+              </div>
+            </div>`;
+            
+          } else {
+            // 如果沒有 highlights，顯示提示訊息
+            html += `<div class="competition-highlights-wrapper">
+              <div class="highlights-display-area">
+                <div class="highlights-placeholder">共獲得 ${comp.results}，詳細作品資訊請參考新聞連結</div>
+              </div>
+            </div>`;
+          }
+
+          if (comp.newsLink && comp.newsLink.trim() !== '') {
+            html += `<div class="competition-news">
+              <a href="${comp.newsLink}" target="_blank" class="news-link">
+                📰 ${comp.newsText}
+              </a>
+            </div>`;
+          }
+
+          html += `</div>`;
+        });
+        
+        html += `</div></div>`;
+
+        if (isLatestYear) {
+          html += `</div></div>`;
+        } else {
+          html += `</div></div>`;
+        }
+      });
+
+      contentDiv.innerHTML = html;
+    }
+
+    // 打開彈出式視窗
+    function openAwardsModal() {
+      const modal = document.getElementById('awardsModal');
+      generateAwardsContent();
+      
+      // 滾動到頂部（最新年份已經直接展示在最上方）
+      setTimeout(() => {
+        const contentDiv = document.getElementById('awardsContent');
+        if (contentDiv) {
+          contentDiv.scrollTop = 0;
+        }
+      }, 50);
+      
+      modal.classList.add('modal--active');
+      document.body.style.overflow = 'hidden'; // 防止背景滾動
+    }
+
+    // 關閉彈出式視窗
+    function closeAwardsModal() {
+      const modal = document.getElementById('awardsModal');
+      modal.classList.remove('modal--active');
+      document.body.style.overflow = ''; // 恢復滾動
+    }
+
+    // 按 ESC 鍵關閉視窗
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeAwardsModal();
+      }
+    });
+
+    // 切換年份區塊展開/收起
+    function toggleYearSection(yearId) {
+      const content = document.getElementById(yearId);
+      const icon = document.getElementById(`icon-${yearId}`);
+      
+      if (content.classList.contains('year-content--expanded')) {
+        content.classList.remove('year-content--expanded');
+        icon.textContent = '▼';
+      } else {
+        content.classList.add('year-content--expanded');
+        icon.textContent = '▲';
+      }
+    }
+
+
+    // 初始化：確保 modal 初始狀態是隱藏的
+    document.addEventListener('DOMContentLoaded', function() {
+      const awardsModal = document.getElementById('awardsModal');
+      const globalVillageModal = document.getElementById('globalVillageModal');
+      awardsModal.classList.remove('modal--active');
+      globalVillageModal.classList.remove('modal--active');
+    });
+
+    // ==================== 小地球村彈出式視窗 ====================
+    
+    // 小地球村資料
+    const globalVillageData = {
+      categories: [
+        {
+          title: "國際文化節",
+          icon: "🎉",
+          description: "每年舉辦的大型活動，最能體現「地球村」概念",
+          items: [
+            {
+              name: "國際文化節 (International Cultural Festival)",
+              description: "來自印尼、越南、馬來西亞、印度、日本等國的留學生，會穿著傳統服飾（如印尼蠟染衫 Batik、越南奧黛 Ao Dai），設立攤位販售家鄉美食（如印尼沙嗲、越南春捲），並進行各國傳統舞蹈表演。校園彷彿置身小型地球村，展現多元共融。",
+              link: "https://oia.yuntech.edu.tw/",
+              linkText: "雲科大國際事務處 (OIA)"
+            }
+          ]
+        },
+        {
+          title: "國際學生社團",
+          icon: "👥",
+          description: "活躍的國際學生組織，促進文化交流與互助",
+          items: [
+            {
+              name: "國際學生聯誼會 (ISA)",
+              description: "統籌各國學生會活動，促進國際學生之間的交流與合作。",
+              link: "https://oia.yuntech.edu.tw/index.php/international-students/student-associations",
+              linkText: "國際學生社團列表"
+            },
+            {
+              name: "印尼學生會 (PPI YunTech)",
+              description: "雲科大最活躍的國際學生組織之一，定期舉辦文化交流活動，協助印尼學生適應校園生活。",
+              link: "",
+              linkText: ""
+            },
+            {
+              name: "越南學生會",
+              description: "為越南學生提供支持與交流平台，舉辦傳統節慶活動。",
+              link: "",
+              linkText: ""
+            },
+            {
+              name: "馬來西亞同學會",
+              description: "促進馬來西亞學生之間的聯繫，分享家鄉文化與美食。",
+              link: "",
+              linkText: ""
+            },
+            {
+              name: "TEEP 蹲點計畫",
+              description: "雲科大積極推動教育部 TEEP 計畫，引進大量外籍實習生進入實驗室，讓英語和母語成為實驗室的日常語言，促進國際學術交流。",
+              link: "",
+              linkText: ""
+            }
+          ]
+        },
+        {
+          title: "文化節慶活動",
+          icon: "🎊",
+          description: "各國傳統節慶在校園與社區中綻放",
+          items: [
+            {
+              name: "開齋節 (Eid al-Fitr)",
+              description: "針對龐大的印尼穆斯林學生群體，學校會舉辦慶祝活動，甚至邀請周邊社區參與，展現對多元宗教文化的尊重與包容。",
+              link: "",
+              linkText: ""
+            },
+            {
+              name: "排燈節 (Diwali)",
+              description: "針對印度學生舉辦的傳統節慶，慶祝光明戰勝黑暗，展現印度文化的豐富內涵。",
+              link: "",
+              linkText: ""
+            }
+          ]
+        },
+        {
+          title: "社區服務與文化交流",
+          icon: "🤝",
+          description: "將國際文化帶入社區，豐富在地文化底蘊",
+          items: [
+            {
+              name: "大手牽小手計畫 (USR)",
+              description: "雲科大的外籍生會到雲林縣的偏鄉小學進行文化交流教學，透過語言、文化、藝術等多元方式，讓偏鄉學童認識世界各國文化，同時也讓國際學生深入了解台灣在地文化，真正落實無國界的文化共融。",
+              link: "https://usr.yuntech.edu.tw/",
+              linkText: "雲科大 USR 計畫"
+            }
+          ]
+        },
+        {
+          title: "國際事務處 (OIA)",
+          icon: "🌐",
+          description: "推動國際化的重要推手",
+          items: [
+            {
+              name: "國際事務處官方網站",
+              description: "提供最新的國際交流活動資訊、國際學生生活指南、各國學生會資訊，以及歷年國際文化節的回顧影片與照片。",
+              link: "https://oia.yuntech.edu.tw/",
+              linkText: "前往 OIA 網站"
+            }
+          ]
+        }
+      ]
+    };
+
+    // 生成小地球村內容
+    function generateGlobalVillageContent() {
+      const contentDiv = document.getElementById('globalVillageContent');
+      let html = '';
+
+      globalVillageData.categories.forEach((category, index) => {
+        html += `<div class="global-village-category">
+          <div class="global-village-category-header">
+            <h3 class="global-village-category-title">
+              <span class="category-icon">${category.icon}</span>
+              ${category.title}
+            </h3>
+            <p class="global-village-category-desc">${category.description}</p>
+          </div>
+          <div class="global-village-items">`;
+
+        category.items.forEach((item) => {
+          html += `<div class="global-village-item">
+            <h4 class="global-village-item-title">${item.name}</h4>
+            <p class="global-village-item-desc">${item.description}</p>`;
+          
+          if (item.link && item.link.trim() !== '') {
+            html += `<a href="${item.link}" target="_blank" class="global-village-link">
+              🔗 ${item.linkText || '了解更多'}
+            </a>`;
+          }
+          
+          html += `</div>`;
+        });
+
+        html += `</div></div>`;
+      });
+
+      contentDiv.innerHTML = html;
+    }
+
+    // 打開小地球村彈出式視窗
+    function openGlobalVillageModal() {
+      const modal = document.getElementById('globalVillageModal');
+      generateGlobalVillageContent();
+      
+      setTimeout(() => {
+        const contentDiv = document.getElementById('globalVillageContent');
+        if (contentDiv) {
+          contentDiv.scrollTop = 0;
+        }
+      }, 50);
+      
+      modal.classList.add('modal--active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // 關閉小地球村彈出式視窗
+    function closeGlobalVillageModal() {
+      const modal = document.getElementById('globalVillageModal');
+      modal.classList.remove('modal--active');
+      document.body.style.overflow = '';
+    }
+
+    // 按 ESC 鍵關閉小地球村視窗
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeGlobalVillageModal();
+        closeAwardsModal();
+      }
+    });
+  </script>
+</body>
+</html>

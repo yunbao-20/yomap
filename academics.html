@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>設計職人與深夜竹構｜雲科．季節限定的記憶圖鑑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="探訪雲科大設計學院的職人精神，看見秋冬深夜裡，學生如何在草地上點亮燈火，用竹子編織出季節限定的校園風景。">
+  <link rel="stylesheet" href="css/academics.css">
+  <link rel="stylesheet" href="bamboo.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav__inner container">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__brand-title">雲科．記憶圖鑑</span>
+          <span class="nav__brand-subtitle">YunTech Memory Archive</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="about.html" class="nav__link">關於這裡</a></li>
+          <li><a href="campus-life.html" class="nav__link">校園記憶</a></li>
+          <li><a href="sustainability-usr.html" class="nav__link">在地連結</a></li>
+          <li><a href="academics.html" class="nav__link nav__link--active">設計職人</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page--academics">
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__text">
+          <p class="page-hero__eyebrow">THE CRAFTSMANSHIP</p>
+          <h1 class="page-hero__title">設計職人與深夜竹構</h1>
+          <p class="page-hero__subtitle">
+            每年秋冬，當夜幕低垂，雲科大的草地上便會亮起點點燈光。<br>
+            那是設計學院的學生，正用雙手與竹子，編織著屬於這個季節的校園記憶。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. 深夜施工：執著的光 -->
+    <section class="section section--academics section--bamboo-night">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">深夜 11 點的雲科，有一種光叫做「執著」</h2>
+          <p class="section__description">
+            如果不曾看過凌晨的雲科，你就還沒看懂設計系。
+          </p>
+        </header>
+
+        <article class="card card--story">
+          <p class="story-intro">
+            當圖書館的燈火漸漸熄滅，設計學院的草坪上，另一場戰鬥才正要開始。
+          </p>
+          <p>
+            從 10 月的涼意到 12 月的寒風，這是雲科校園最特別的『竹構季節』。空氣中瀰漫著剛切開的青竹香氣，耳邊伴隨著電鑽聲與鋸子的節奏。同學們戴著頭燈，在微弱的路燈下測量、切割、綁紮。
+          </p>
+          <p>
+            <strong>「為什麼不白天做？」</strong> 也許你會問。
+          </p>
+          <p>
+             因為白天有課，因為靈感總在深夜造訪，更因為一旦開始了，就捨不得停下來。手上的竹子是冰冷的，粗糙的纖維有時會劃破手指，但那一雙雙為了完美而不願妥協的手，是熱的。
+          </p>
+          <p>
+            為了讓結構多支撐一公斤，為了讓曲線更符合想像，他們願意與寒風共處到天亮。這不只是一份作業，這是雲科設計人對於『創造』最倔強的溫柔。
+          </p>
+        </article>
+
+        <!-- 深夜施工照片網格 - 整齊方塊版型 -->
+        <div class="bamboo-grid-gallery">
+            <div class="bamboo-photo bamboo-photo--square">
+                <img src="img/494E48F8-0E76-4739-8867-273D4B0239D2.jpg" alt="眾人抬竹子">
+                <p class="photo-caption">合力抬起</p>
+            </div>
+
+            <div class="bamboo-photo bamboo-photo--square">
+                <img src="img/39D31E5C-4176-4813-9EC1-A93354B01CB2.jpg" alt="電鑽施工">
+                <p class="photo-caption">精準鑽孔</p>
+            </div>
+
+            <div class="bamboo-photo bamboo-photo--square">
+                <img src="img/7FE62DAF-461F-4C7B-A1F0-7BC72DB202FE.jpg" alt="梯子剪影">
+                <p class="photo-caption">深夜剪影</p>
+            </div>
+        </div>
+
+        <!-- 微型建造互動遊戲區塊 -->
+        <div class="game-wrapper">
+          <div class="game-container">
+            <h2 class="game-title">深夜竹構．微型建造</h2>
+            
+            <svg viewBox="0 0 400 300" class="game-svg" id="bambooCanvas" onclick="nextStep()">
+              <defs>
+                <radialGradient id="lightGradient" cx="50%" cy="0%" r="80%">
+                  <stop offset="0%" style="stop-color:white;stop-opacity:0.6" />
+                  <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+                </radialGradient>
+              </defs>
+
+              <path d="M100,-50 L300,-50 L350,300 L50,300 Z" class="light-beam" id="beam" />
+
+              <g id="step1">
+                <path d="M50,250 L350,250" class="bamboo" />
+                <path d="M50,248 L350,248" class="bamboo highlight" />
+                <circle cx="120" cy="250" r="5" class="joint" />
+                <circle cx="280" cy="250" r="5" class="joint" />
+              </g>
+
+              <g id="step2">
+                <path d="M100,250 L120,100" class="bamboo" />
+                <path d="M102,250 L122,100" class="bamboo highlight" />
+                <path d="M300,250 L280,100" class="bamboo" />
+                <path d="M298,250 L278,100" class="bamboo highlight" />
+                
+                <circle cx="110" cy="175" r="4" class="joint" />
+                <circle cx="290" cy="175" r="4" class="joint" />
+              </g>
+
+              <g id="step3">
+                <path d="M80,100 L320,100" class="bamboo" />
+                <path d="M80,98 L320,98" class="bamboo highlight" />
+                <path d="M120,100 L200,50 L280,100" class="bamboo" />
+                
+                <path d="M115,100 Q120,90 125,100 T115,105" class="rope" />
+                <path d="M275,100 Q280,90 285,100 T275,105" class="rope" />
+              </g>
+
+              <g id="step4">
+                <path d="M120,100 Q200,180 280,100" stroke="#fff" fill="none" stroke-width="1" stroke-dasharray="5,5" class="rope" />
+                <path d="M120,100 Q200,200 280,100" stroke="#fff" fill="none" stroke-width="1" stroke-dasharray="5,5" class="rope" />
+                <path d="M140,120 L140,180" stroke="#fff" fill="none" stroke-width="1" class="rope" />
+                <path d="M180,140 L180,190" stroke="#fff" fill="none" stroke-width="1" class="rope" />
+                <path d="M220,140 L220,190" stroke="#fff" fill="none" stroke-width="1" class="rope" />
+                <path d="M260,120 L260,180" stroke="#fff" fill="none" stroke-width="1" class="rope" />
+              </g>
+            </svg>
+
+            <div class="status-panel">
+              <div class="time-display" id="timeText">22:00 PM</div>
+              <div class="message-display" id="msgText">草地上的竹子已經分類完畢，準備開始。</div>
+            </div>
+            <div class="instruction">▼ 點擊畫面進行下一步 ▼</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. 結構與細節：從泥土長出的藝術 -->
+    <section class="section section--academics section--bamboo-materials">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">從泥土長出的建築，歸還給土地的藝術</h2>
+          <p class="section__description">
+            每一根竹子，都記住了我們手心的溫度。
+          </p>
+        </header>
+
+        <article class="card card--story">
+          <p class="story-intro">
+            在 YoMap 的地圖標記之外，有一些風景是無法被導航永久鎖定的。
+          </p>
+          <p>
+             竹子取之於自然，最終也將回歸自然。這些散落在草地上的竹管，經過同學們幾十個夜晚的打磨、火烤、彎曲，變成了校園裡最有機的建築。它們沒有鋼筋水泥的永恆，卻有著隨季節呼吸的生命力。
+          </p>
+          <p>
+             你看得見的是壯觀的造型，看不見的是藏在細節裡的巧思。如何用繩結取代釘子？如何利用竹子的彈性對抗地心引力？這是一場關於『物理』與『美學』的對話。
+          </p>
+          <p>
+            這是一場關於『時間』的藝術。我們用 App 紀錄地點，而用這些竹子紀錄青春的重量。
+          </p>
+        </article>
+
+        <div class="bamboo-featured-spotlight bamboo-featured-spotlight--horizontal">
+          <article class="card card--story bamboo-featured-text">
+            <h3 class="subsection__title">細節裡的職人精神</h3>
+            <p>
+              每一根竹子的交會點，都藏著設計的巧思。這是一場關於<strong>「感性手作」</strong>與<strong>「理性結構」</strong>的對話。
+            </p>
+            
+            <div class="bamboo-quote-box">
+              <p>「圖紙上畫的是完美的線條，<br>但手裡握的，是有脾氣的竹子。」</p>
+            </div>
+
+            <p>
+              從手工編織的繩結，到精密計算的三視圖。學生們必須用雙手去順應竹子的韌性，同時用物理計算來馴服地心引力。這不只是一件作品，更是工藝與科學完美結合的見證。
+            </p>
+          </article>
+
+          <div class="bamboo-featured-images bamboo-featured-images--row">
+            <div class="bamboo-photo bamboo-photo--horizontal bamboo-photo--small">
+              <img src="img/bamboo/IMG_0888.JPG" alt="設計理念版" style="object-position: top;">
+              <p class="photo-caption">精密計算：理性的骨架</p>
+            </div>
+
+            <div class="bamboo-photo bamboo-photo--vertical-standard">
+              <img src="img/bamboo/IMG_0887.JPG" alt="網編特寫" style="object-position: center;">
+              <p class="photo-caption">手工編織：指尖的溫度</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- 3. 實作與傳承 -->
+    <section class="section section--academics">
+      <div class="container">
+        <article class="card">
+          <h3 class="subsection__title">手作的溫度：PBL 與實務致用</h3>
+          <p>
+            在雲科大，「學習」從來不只是坐在教室裡聽課。
+            從<strong>問題導向學習 (PBL)</strong> 到各系的畢業製作，這裡強調的是「動手做」的價值。
+          </p>
+          <p>
+            就像那些深夜裡的竹構一樣，知識必須經過雙手的實踐、汗水的洗禮，
+            才能轉化為真正的能力，並在未來的職涯中發光發熱。
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p class="footer__title">雲科．季節限定的記憶圖鑑</p>
+        <p class="footer__text">© 2025 YunTech Memory Archive. All Rights Reserved.</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__subtitle"><a target="_blank" href="app/app.html">雲坐標</a></h3>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="campus-life.html">昔日後花園</a></li>
+          <li><a href="academics.html">深夜竹構</a></li>
+          <li><a href="sustainability-usr.html">在地故事</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  let currentStep = 0;
+  const totalSteps = 4;
+  
+  const timeline = [
+    { time: "22:00 PM", msg: "草地上的竹子已經分類完畢，準備開始。" },
+    { time: "23:15 PM", msg: "STEP 1: 基礎定位。確認每個支點都穩固。" },
+    { time: "00:30 AM", msg: "STEP 2: 豎立結構。竹子在寒風中站了起來。" },
+    { time: "01:45 AM", msg: "STEP 3: 橫樑與節點。用繩結鎖住彼此的張力。" },
+    { time: "03:00 AM", msg: "STEP 4: 編織與點燈。這是我們送給校園的禮物。" }
+  ];
+
+  function nextStep() {
+    if (currentStep >= totalSteps) {
+      // 重置遊戲
+      resetGame();
+      return;
+    }
+
+    currentStep++;
+    updateGame(currentStep);
+  }
+
+  function updateGame(step) {
+    // 更新文字
+    document.getElementById('timeText').innerText = timeline[step].time;
+    document.getElementById('msgText').innerText = timeline[step].msg;
+
+    // 顯示對應的 SVG 群組
+    const group = document.getElementById('step' + step);
+    if(group) {
+      // 顯示竹子
+      const bamboos = group.querySelectorAll('.bamboo, .joint');
+      bamboos.forEach(el => el.classList.add('visible'));
+      
+      // 綁繩結 (稍微延遲)
+      const ropes = group.querySelectorAll('.rope');
+      setTimeout(() => {
+        ropes.forEach(el => el.classList.add('tied'));
+      }, 500);
+    }
+
+    // 最後一步特效
+    if (step === 4) {
+      document.getElementById('beam').style.opacity = '1';
+      document.querySelector('.instruction').innerText = "↻ 點擊重新體驗";
+    }
+  }
+
+  function resetGame() {
+    currentStep = 0;
+    // 更新文字
+    document.getElementById('timeText').innerText = timeline[0].time;
+    document.getElementById('msgText').innerText = timeline[0].msg;
+    document.querySelector('.instruction').innerText = "▼ 點擊畫面進行下一步 ▼";
+    
+    // 隱藏所有元素
+    document.querySelectorAll('.bamboo, .joint, .light-beam').forEach(el => {
+      el.classList.remove('visible');
+      el.style.opacity = ''; // 清除 inline style
+    });
+    
+    document.querySelectorAll('.rope').forEach(el => {
+      el.classList.remove('tied');
+    });
+    
+    document.getElementById('beam').style.opacity = '0';
+  }
+</script>
+</body>
+</html>
