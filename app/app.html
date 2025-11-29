@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>雲坐標｜雲科大智慧校園導航 App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="雲坐標－結合校園導航、吃豆人遊戲與成就系統的雲林科技大學智慧校園 App。">
+  <!-- 之後會連到 styles.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="nav__brand">
+          <span class="nav__brand-title">雲坐標之空間資料庫運用</span>
+          <span class="nav__brand-subtitle"></span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a href="#home">首頁</a></li>
+          <li><a href="#features">功能亮點</a></li>
+          <li><a href="#map">地圖導覽</a></li>
+          <li><a href="#navigation">定位導航</a></li>
+          <li><a href="#game">遊戲體驗</a></li>
+          <li><a href="#personalization">個人化設定</a></li>
+          <li><a href="#flow">使用流程</a></li>
+          <li><a href="#team">團隊介紹</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero 首屏：簡介 + 截圖 -->
+    <section class="section section--hero" id="home">
+      <div class="container hero__layout">
+        <div class="hero__text">
+          <p class="hero__eyebrow">國立雲林科技大學｜智慧校園 App</p>
+          <h1 class="hero__title">雲坐標</h1>
+          <p class="hero__subtitle">在地圖上玩遊戲的校園導航 App</p>
+          <p class="hero__description">
+            結合「校園導航」、「經典吃豆人遊戲」與「成就系統」<br class="hero__br">
+            專為雲科大設計，幫助新生與訪客輕鬆找路、玩遊戲、解成就。
+          </p>
+
+          <div class="hero__actions">
+            <a href="#map" class="btn btn--primary">看看地圖導覽</a>
+            <a href="#game" class="btn btn--outline">了解遊戲玩法</a>
+          </div>
+
+          <ul class="hero__bullets">
+            <li>🗺 校園專屬 2D 地圖與路網導航</li>
+            <li>🎮 經典吃豆人 + 多款迷你遊戲</li>
+            <li>🏆 成就、主題與頭像解鎖</li>
+          </ul>
+        </div>
+
+        <!-- 右側：App 截圖區 -->
+        <div class="hero__screens">
+          <div class="hero__screen hero__screen--main">
+            <img src="images/map/地圖頁面.PNG" alt="雲坐標 App 校園地圖畫面">
+          </div>
+          <div class="hero__screen-group">
+            <div class="hero__screen hero__screen--small">
+              <img src="images/map/地圖資訊.PNG" alt="雲坐標 App 地圖資訊篩選畫面">
+            </div>
+            <div class="hero__screen hero__screen--small">
+              <img src="images/game/吃豆人.PNG" alt="雲坐標 App 遊戲入口畫面">
+            </div>
+            <div class="hero__screen hero__screen--small">
+              <img src="images/info/Login.PNG" alt="雲坐標 App 登入畫面">
+            </div>
+            <div class="hero__screen hero__screen--small">
+              <img src="images/info/Info.JPG" alt="雲坐標 App 地圖資訊篩選畫面">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 功能總覽 -->
+    <section class="section section--features" id="features">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">APP FEATURES</p>
+          <h2 class="section__title">雲坐標是一款什麼樣的 App？</h2>
+          <p class="section__description">
+            一個專為雲科大打造的智慧校園應用，融合地圖導航、遊戲化探索與個人化設定<br class="section__br">
+            讓「找路」變成一場好玩的校園冒險。
+          </p>
+        </header>
+
+        <div class="features__grid">
+          <article class="card feature">
+            <h3 class="feature__title">🗺 校園導航系統</h3>
+            <p class="feature__text">
+              內建雲科大 2D 校園地圖，支援即時定位、搜尋建築與設施，
+              並透過校園路網規劃實際可走的路徑。
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3 class="feature__title">🎮 遊戲化探索</h3>
+            <p class="feature__text">
+              將經典吃豆人搬進校園，搭配時間制機制與多款迷你遊戲，
+              讓逛校園不只是走路，而是一場解任務的冒險。
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3 class="feature__title">👤 個人化 & 成就</h3>
+            <p class="feature__text">
+              使用雲科校務信箱登入，支援語言、音效、震動調整，
+              並透過成就積分解鎖主題與頭像，打造自己的專屬風格。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 地圖導覽區 -->
+    <section class="section section--map" id="map">
+      <div class="container map__layout">
+        <div class="map__text">
+          <p class="section__eyebrow">CAMPUS MAP</p>
+          <h2 class="section__title">🗺 校園地圖導覽</h2>
+          <p class="section__description">
+            基於自建的校園路網與空間資料庫，雲坐標能顯示雲科專屬的 2D 校園地圖，<br class="section__br">
+            不只看得到建築物，還能用關鍵字搜尋教室與設施。
+          </p>
+          <ul class="bullet-list">
+            <li>透過「地圖資訊」面板，自由開關建築物、ATM、廁所、飲水機、電梯等 POI。</li>
+            <li>支援即時定位，顯示目前所在位置的藍點，地圖可拖曳與縮放。</li>
+            <li>可查看建築物內部地圖，幫助找到教室與設施位置。</li>
+          </ul>
+        </div>
+
+        <div class="map__preview">
+          <div class="map__preview-item">
+            <div class="card card--image">
+              <img src="images/map/地圖頁面.PNG" alt="雲坐標 App 校園地圖畫面">
+            </div>
+          </div>
+          <div class="map__preview-item">
+            <div class="card card--image">
+              <img src="images/map/地圖資訊.PNG" alt="雲坐標 App 地圖資訊篩選面板">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 定位導航區 -->
+    <section class="section section--navigation" id="navigation">
+      <div class="container nav__layout">
+        <div class="nav__preview">
+          <div class="nav__preview-item">
+            <div class="card card--image">
+              <img src="images/nav/搜索.PNG" alt="雲坐標 App 搜尋功能">
+            </div>
+          </div>
+          <div class="nav__preview-item">
+            <div class="card card--image">
+              <img src="images/nav/搜索結果.PNG" alt="雲坐標 App 搜尋結果">
+            </div>
+          </div>
+          <div class="nav__preview-item">
+            <div class="card card--image">
+              <img src="images/nav/定位目的地.PNG" alt="雲坐標 App 定位目的地">
+            </div>
+          </div>
+          <div class="nav__preview-item">
+            <div class="card card--image">
+              <img src="images/nav/推薦最短路綫.PNG" alt="雲坐標 App 推薦最短路線">
+            </div>
+          </div>
+        </div>
+
+        <div class="nav__text">
+          <p class="section__eyebrow">NAVIGATION</p>
+          <h2 class="section__title">📍 定位與路徑導航</h2>
+          <p class="section__description">
+            搜尋列可輸入「建築物名稱」或「設施關鍵字」，快速找到目的地，<br class="section__br">
+            並沿著實際道路導航，路徑更貼近真實動線。
+          </p>
+          <ul class="bullet-list">
+            <li>導航路線會跟著校園路網走，不會穿越建築物或水池。</li>
+            <li>支援外賣店導航與推薦點，方便尋找校園周邊美食。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 遊戲體驗區 -->
+    <section class="section section--game" id="game">
+      <div class="container game__layout">
+        <div class="game__text">
+          <p class="section__eyebrow">GAME EXPERIENCE</p>
+          <h2 class="section__title">🎮 經典吃豆人 × 迷你遊戲</h2>
+          <p class="section__description">
+            在迷宮中收集小點、躲避鬼魂，吃到大點就會觸發迷你遊戲。<br class="section__br">
+            完成 4 個任務就能通關，過程中還能累積成就與積分。
+          </p>
+          <ul class="bullet-list">
+            <li>使用滑動操作吃豆人，操控直覺又流暢。</li>
+            <li>收集白色小點可以影響剩餘時間，讓你在倒數中保持節奏。</li>
+            <li>吃到大點會啟動隨機迷你遊戲，題型包含：</li>
+            <div class="mini-game-buttons">
+              <button class="mini-game-btn" data-image="images/game/連線遊戲.PNG" data-title="連線遊戲">連線遊戲</button>
+              <button class="mini-game-btn" data-image="images/game/數獨.JPG" data-title="數獨">數獨</button>
+              <button class="mini-game-btn" data-image="images/game/記憶燈泡.JPG" data-title="記憶燈泡">記憶燈泡</button>
+              <button class="mini-game-btn" data-image="images/game/數學牆.PNG" data-title="數學牆">數學牆</button>
+              <button class="mini-game-btn" data-image="images/game/圓形快速反應.PNG" data-title="圓形快速反應">圓形快速反應</button>
+              <button class="mini-game-btn" data-image="images/game/修復電線.PNG" data-title="修復電線">修復電線</button>
+              <button class="mini-game-btn" data-image="images/game/心率遊戲.PNG" data-title="心率遊戲">心率遊戲</button>
+              <button class="mini-game-btn" data-image="images/game/驗證碼.PNG" data-title="驗證碼">驗證碼</button>
+              <button class="mini-game-btn" data-image="images/game/色盲測試.PNG" data-title="色盲測試">色盲測試</button>
+              <button class="mini-game-btn" data-image="images/game/摩斯密碼.PNG" data-title="摩斯密碼">摩斯密碼</button>
+            </div>
+            <li>完成任務後，鬼魂速度會提升，挑戰難度逐漸加深。</li>
+            <li>撞上彩色鬼魂會失去生命，要小心規劃路線。</li>
+          </ul>
+          
+        </div>
+
+        <div class="game__screens">
+          <div class="card">
+            <img src="images/game/吃豆人.PNG" alt="雲坐標 App 經典吃豆人遊戲入口畫面">
+          </div>
+          <div class="card">
+            <img src="images/game/游戲頁面.PNG" alt="雲坐標 App 遊戲進行畫面">
+          </div>
+          <div class="card">
+            <img src="images/game/游戲完成.PNG" alt="雲坐標 App 遊戲完成畫面">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 個人化設定區 -->
+    <section class="section section--personalization" id="personalization">
+      <div class="container personalization__layout">
+        <div class="personalization__screens">
+          <div class="card">
+            <img src="images/info/Login.PNG" alt="雲坐標 App 登入畫面">
+          </div>
+          <div class="card">
+            <img src="images/info/Register.PNG" alt="雲坐標 App 註冊畫面">
+          </div>
+          <div class="card">
+            <img src="images/info/Info.JPG" alt="雲坐標 App 個人資料畫面">
+          </div>
+          <div class="card">
+            <img src="images/info/Achievements.PNG" alt="雲坐標 App 成就系統">
+          </div>
+          <div class="card">
+            <img src="images/info/Reward_Theme_Color.PNG" alt="雲坐標 App 主題顏色獎勵">
+          </div>
+          <div class="card">
+            <img src="images/info/Reward_Avatar.PNG" alt="雲坐標 App 頭像獎勵">
+          </div>
+        </div>
+
+        <div class="personalization__text">
+          <p class="section__eyebrow">PERSONALIZATION</p>
+          <h2 class="section__title">👤 個人資料、主題與成就</h2>
+          <p class="section__description">
+            雲坐標不只是工具，也是一個可以展現自我風格的 App。<br class="section__br">
+            從語言、音效到主題與頭像，都能依照自己的喜好調整。
+          </p>
+          <ul class="bullet-list">
+            <li>使用雲科校務信箱註冊登入，保障校園社群使用範圍。</li>
+            <li>支援中文 / 英文切換，一鍵切換介面語言。</li>
+            <li>音效與震動可獨立開關，符合不同場合需求。</li>
+            <li>透過完成遊戲與成就，解鎖更多主題顏色與可愛頭像。</li>
+            <li>查看個人成就列表，追蹤遊戲進度與解鎖狀態。</li>
+            <li>自訂個人資料與頭像，展現個人風格。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用流程區 -->
+    <section class="section section--flow" id="flow">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">HOW IT WORKS</p>
+          <h2 class="section__title">🚀 四步驟開始使用雲坐標</h2>
+        </header>
+
+        <ol class="flow__steps">
+          <li class="flow__step">
+            <h3 class="flow__title">1. 下載 / 開啟 App</h3>
+            <p class="flow__text">
+              在擺攤現場掃描 QR Code 或由學校提供下載方式，安裝並開啟「雲坐標」。
+            </p>
+          </li>
+          <li class="flow__step">
+            <h3 class="flow__title">2. 使用校務信箱註冊</h3>
+            <p class="flow__text">
+              使用 <code>@yuntech.edu.tw</code> 或 <code>@live.yuntech.edu.tw</code> 帳號註冊登入，建立個人資料。
+            </p>
+          </li>
+          <li class="flow__step">
+            <h3 class="flow__title">3. 試用地圖導航</h3>
+            <p class="flow__text">
+              在地圖頁輸入「系館或教室」，開啟導航並試試看地圖資訊篩選功能。
+            </p>
+          </li>
+          <li class="flow__step">
+            <h3 class="flow__title">4. 進入遊戲解成就</h3>
+            <p class="flow__text">
+              切換到底部的遊戲分頁，開始吃豆人與迷你遊戲，累積成就、解鎖主題與頭像。
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 團隊介紹 -->
+    <section class="section section--team" id="team">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">TEAM & CREDITS</p>
+          <h2 class="section__title">團隊資訊</h2>
+        </header>
+
+        <div class="team__grid">
+          <article class="card team__card">
+            <h3 class="team__title">學校與系所</h3>
+            <ul class="team__list">
+              <li><strong>學校：</strong>國立雲林科技大學</li>
+              <li><strong>系所：</strong>資訊管理系</li>
+              <li><strong>課程：</strong>資訊管理系畢業實務專題</li>
+              <li><strong>專題名稱：</strong>雲坐標－空間資料庫運用</li>
+            </ul>
+          </article>
+
+          <article class="card team__card">
+            <h3 class="team__title">專題成員</h3>
+            <ul class="team__list">
+              <li><strong>專題組長：</strong>黃友柔　A11323050</li>
+              <li><strong>專題組員：</strong>吳亭萱　A11323037</li>
+              <li><strong>專題組員：</strong>洪湘晴　A11323026</li>
+              <li><strong>專題組員：</strong>黃玥貽　W11323001</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__text">
+        © 2025 雲坐標－空間資料庫運用 · 國立雲林科技大學 資訊管理系
+      </p>
+      <a href="#top" class="footer__back-to-top">回到頁首 ↑</a>
+    </div>
+  </footer>
+
+  <!-- 遊戲圖片彈出視窗 -->
+  <div class="game-modal" id="gameModal">
+    <div class="game-modal__overlay"></div>
+    <div class="game-modal__content">
+      <button class="game-modal__close" aria-label="關閉">&times;</button>
+      <h3 class="game-modal__title" id="gameModalTitle"></h3>
+      <div class="game-modal__image">
+        <img id="gameModalImage" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 遊戲圖片彈出視窗功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('gameModal');
+      const modalImage = document.getElementById('gameModalImage');
+      const modalTitle = document.getElementById('gameModalTitle');
+      const closeBtn = document.querySelector('.game-modal__close');
+      const overlay = document.querySelector('.game-modal__overlay');
+      const gameButtons = document.querySelectorAll('.mini-game-btn');
+
+      // 打開彈出視窗
+      function openModal(imageSrc, title) {
+        modalImage.src = imageSrc;
+        modalImage.alt = title;
+        modalTitle.textContent = title;
+        modal.classList.add('game-modal--active');
+        document.body.style.overflow = 'hidden'; // 防止背景滾動
+      }
+
+      // 關閉彈出視窗
+      function closeModal() {
+        modal.classList.remove('game-modal--active');
+        document.body.style.overflow = ''; // 恢復滾動
+      }
+
+      // 為每個按鈕添加點擊事件
+      gameButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          const imageSrc = this.getAttribute('data-image');
+          const title = this.getAttribute('data-title');
+          openModal(imageSrc, title);
+        });
+      });
+
+      // 點擊關閉按鈕
+      closeBtn.addEventListener('click', closeModal);
+
+      // 點擊背景關閉
+      overlay.addEventListener('click', closeModal);
+
+      // 按 ESC 鍵關閉
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('game-modal--active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
